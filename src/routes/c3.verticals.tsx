@@ -16,7 +16,7 @@ function Page() {
   return (
     <>
       <ConceptPageHero id="c3" eyebrow="Business Verticals" title={'Six businesses, one mission.'} subtitle={'Mobile, accessories, smart devices, energy, retail enablement and after-sales — under one roof.'} />
-      <VerticalsSection />
+      <VerticalsSection base="/c3" />
     </>
   );
 }

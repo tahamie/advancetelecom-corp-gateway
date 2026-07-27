@@ -41,12 +41,48 @@ export const JOURNEY = [
 ];
 
 export const VERTICALS = [
-  { title: "Mobile Distribution", desc: "Authorised distribution for leading global smartphone brands, backed by nationwide retail depth." },
-  { title: "Accessories", desc: "A curated portfolio of cases, audio, chargers and power banks from trusted brands." },
-  { title: "Smart Devices", desc: "Wearables, true-wireless audio and connected home devices." },
-  { title: "Energy Solutions", desc: "Solar, inverter and battery systems for homes, businesses and industry." },
-  { title: "Retail Enablement", desc: "Training academy, POS support and channel programmes for retail partners." },
-  { title: "After-Sales & Service", desc: "Nationwide warranty, repair and customer-support infrastructure." },
+  { 
+    slug: "mobile-distribution",
+    title: "Mobile Distribution", 
+    desc: "Authorised distribution for leading global smartphone brands, backed by nationwide retail depth.",
+    longDesc: "As Pakistan's premier authorised distributor for the world's most renowned smartphone brands, we ensure that cutting-edge mobile technology reaches every corner of the country. Our extensive nationwide retail network guarantees availability, competitive pricing, and unparalleled reach.",
+    videoUrl: "https://videos.pexels.com/video-files/3209211/3209211-hd_1920_1080_25fps.mp4"
+  },
+  { 
+    slug: "accessories",
+    title: "Accessories", 
+    desc: "A curated portfolio of cases, audio, chargers and power banks from trusted brands.",
+    longDesc: "Enhance and protect your devices with our carefully curated selection of premium accessories. From high-fidelity audio equipment and durable cases to fast chargers and reliable power banks, we partner with trusted global brands to deliver quality you can count on.",
+    videoUrl: "https://videos.pexels.com/video-files/5200382/5200382-hd_1920_1080_30fps.mp4"
+  },
+  { 
+    slug: "smart-devices",
+    title: "Smart Devices", 
+    desc: "Wearables, true-wireless audio and connected home devices.",
+    longDesc: "Step into the future with our ecosystem of smart devices. We distribute the latest in wearable technology, true-wireless audio, and smart home connectivity, empowering consumers to live more integrated, efficient, and connected lives.",
+    videoUrl: "https://videos.pexels.com/video-files/5200382/5200382-hd_1920_1080_30fps.mp4"
+  },
+  { 
+    slug: "energy-solutions",
+    title: "Energy Solutions", 
+    desc: "Solar, inverter and battery systems for homes, businesses and industry.",
+    longDesc: "Powering Pakistan's transition to clean, sustainable energy. We provide comprehensive solar panels, high-efficiency inverters, and robust battery storage systems designed to meet the demands of residential, commercial, and industrial sectors.",
+    videoUrl: "https://videos.pexels.com/video-files/2822247/2822247-hd_1920_1080_24fps.mp4"
+  },
+  { 
+    slug: "retail-enablement",
+    title: "Retail Enablement", 
+    desc: "Training academy, POS support and channel programmes for retail partners.",
+    longDesc: "We don't just supply products; we build businesses. Our comprehensive retail enablement programs include a dedicated training academy, point-of-sale (POS) support, and lucrative channel initiatives designed to maximize our partners' success.",
+    videoUrl: "https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4"
+  },
+  { 
+    slug: "after-sales",
+    title: "After-Sales & Service", 
+    desc: "Nationwide warranty, repair and customer-support infrastructure.",
+    longDesc: "Our commitment to the customer extends far beyond the sale. With a robust nationwide infrastructure, we offer comprehensive warranty coverage, expert repair services, and dedicated customer support to ensure peace of mind with every purchase.",
+    videoUrl: "https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4"
+  },
 ];
 
 export const WAREHOUSES = [

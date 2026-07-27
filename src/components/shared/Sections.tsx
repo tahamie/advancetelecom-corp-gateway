@@ -96,19 +96,32 @@ export function JourneySection() {
   );
 }
 
-export function VerticalsSection() {
+export function VerticalsSection({ base }: { base?: string }) {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {VERTICALS.map((v, i) => (
           <Reveal key={v.title} delay={i * 60}>
-            <div className="h-full rounded-2xl p-6 border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform duration-300">
-              <div className="text-xs uppercase tracking-widest text-[color:var(--c-accent)] font-semibold">
-                Business Vertical
+            {base ? (
+              <Link to={`${base}/verticals/$slug`} params={{ slug: v.slug }} className="group block h-full rounded-2xl p-6 border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:border-[color:var(--c-accent)]/50">
+                <div className="flex items-center justify-between">
+                  <div className="text-xs uppercase tracking-widest text-[color:var(--c-accent)] font-semibold">
+                    Business Vertical
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-[color:var(--c-accent)] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                </div>
+                <h3 className="mt-2 font-display font-semibold text-xl group-hover:text-[color:var(--c-accent)] transition-colors">{v.title}</h3>
+                <p className="mt-2 text-sm opacity-75 leading-relaxed">{v.desc}</p>
+              </Link>
+            ) : (
+              <div className="h-full rounded-2xl p-6 border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform duration-300">
+                <div className="text-xs uppercase tracking-widest text-[color:var(--c-accent)] font-semibold">
+                  Business Vertical
+                </div>
+                <h3 className="mt-2 font-display font-semibold text-xl">{v.title}</h3>
+                <p className="mt-2 text-sm opacity-75 leading-relaxed">{v.desc}</p>
               </div>
-              <h3 className="mt-2 font-display font-semibold text-xl">{v.title}</h3>
-              <p className="mt-2 text-sm opacity-75 leading-relaxed">{v.desc}</p>
-            </div>
+            )}
           </Reveal>
         ))}
       </div>
