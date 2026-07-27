@@ -1,4 +1,5 @@
-import { Link } from "@tanstack/react-router";
+import { Link as TSLink } from "@tanstack/react-router";
+const Link = TSLink as any;
 import { useEffect, useState } from "react";
 import { Menu, X, ShoppingBag } from "lucide-react";
 import { cn } from "@/lib/utils";
