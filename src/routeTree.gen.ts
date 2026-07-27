@@ -61,6 +61,7 @@ import { Route as C1ContactRouteImport } from './routes/c1.contact'
 import { Route as C1AboutRouteImport } from './routes/c1.about'
 import { Route as C4NewsSlugRouteImport } from './routes/c4.news.$slug'
 import { Route as C4EventsSlugRouteImport } from './routes/c4.events.$slug'
+import { Route as C3VerticalsSlugRouteImport } from './routes/c3.verticals.$slug'
 import { Route as C3NewsSlugRouteImport } from './routes/c3.news.$slug'
 import { Route as C3EventsSlugRouteImport } from './routes/c3.events.$slug'
 import { Route as C2NewsSlugRouteImport } from './routes/c2.news.$slug'
@@ -328,6 +329,11 @@ const C4EventsSlugRoute = C4EventsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => C4EventsRoute,
 } as any)
+const C3VerticalsSlugRoute = C3VerticalsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => C3VerticalsRoute,
+} as any)
 const C3NewsSlugRoute = C3NewsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -394,7 +400,7 @@ export interface FileRoutesByFullPath {
   '/c3/news': typeof C3NewsRouteWithChildren
   '/c3/offices': typeof C3OfficesRoute
   '/c3/team': typeof C3TeamRoute
-  '/c3/verticals': typeof C3VerticalsRoute
+  '/c3/verticals': typeof C3VerticalsRouteWithChildren
   '/c3/warehouses': typeof C3WarehousesRoute
   '/c4/about': typeof C4AboutRoute
   '/c4/contact': typeof C4ContactRoute
@@ -416,6 +422,7 @@ export interface FileRoutesByFullPath {
   '/c2/news/$slug': typeof C2NewsSlugRoute
   '/c3/events/$slug': typeof C3EventsSlugRoute
   '/c3/news/$slug': typeof C3NewsSlugRoute
+  '/c3/verticals/$slug': typeof C3VerticalsSlugRoute
   '/c4/events/$slug': typeof C4EventsSlugRoute
   '/c4/news/$slug': typeof C4NewsSlugRoute
 }
@@ -450,7 +457,7 @@ export interface FileRoutesByTo {
   '/c3/news': typeof C3NewsRouteWithChildren
   '/c3/offices': typeof C3OfficesRoute
   '/c3/team': typeof C3TeamRoute
-  '/c3/verticals': typeof C3VerticalsRoute
+  '/c3/verticals': typeof C3VerticalsRouteWithChildren
   '/c3/warehouses': typeof C3WarehousesRoute
   '/c4/about': typeof C4AboutRoute
   '/c4/contact': typeof C4ContactRoute
@@ -472,6 +479,7 @@ export interface FileRoutesByTo {
   '/c2/news/$slug': typeof C2NewsSlugRoute
   '/c3/events/$slug': typeof C3EventsSlugRoute
   '/c3/news/$slug': typeof C3NewsSlugRoute
+  '/c3/verticals/$slug': typeof C3VerticalsSlugRoute
   '/c4/events/$slug': typeof C4EventsSlugRoute
   '/c4/news/$slug': typeof C4NewsSlugRoute
 }
@@ -511,7 +519,7 @@ export interface FileRoutesById {
   '/c3/news': typeof C3NewsRouteWithChildren
   '/c3/offices': typeof C3OfficesRoute
   '/c3/team': typeof C3TeamRoute
-  '/c3/verticals': typeof C3VerticalsRoute
+  '/c3/verticals': typeof C3VerticalsRouteWithChildren
   '/c3/warehouses': typeof C3WarehousesRoute
   '/c4/about': typeof C4AboutRoute
   '/c4/contact': typeof C4ContactRoute
@@ -533,6 +541,7 @@ export interface FileRoutesById {
   '/c2/news/$slug': typeof C2NewsSlugRoute
   '/c3/events/$slug': typeof C3EventsSlugRoute
   '/c3/news/$slug': typeof C3NewsSlugRoute
+  '/c3/verticals/$slug': typeof C3VerticalsSlugRoute
   '/c4/events/$slug': typeof C4EventsSlugRoute
   '/c4/news/$slug': typeof C4NewsSlugRoute
 }
@@ -595,6 +604,7 @@ export interface FileRouteTypes {
     | '/c2/news/$slug'
     | '/c3/events/$slug'
     | '/c3/news/$slug'
+    | '/c3/verticals/$slug'
     | '/c4/events/$slug'
     | '/c4/news/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -651,6 +661,7 @@ export interface FileRouteTypes {
     | '/c2/news/$slug'
     | '/c3/events/$slug'
     | '/c3/news/$slug'
+    | '/c3/verticals/$slug'
     | '/c4/events/$slug'
     | '/c4/news/$slug'
   id:
@@ -711,6 +722,7 @@ export interface FileRouteTypes {
     | '/c2/news/$slug'
     | '/c3/events/$slug'
     | '/c3/news/$slug'
+    | '/c3/verticals/$slug'
     | '/c4/events/$slug'
     | '/c4/news/$slug'
   fileRoutesById: FileRoutesById
@@ -1090,6 +1102,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof C4EventsSlugRouteImport
       parentRoute: typeof C4EventsRoute
     }
+    '/c3/verticals/$slug': {
+      id: '/c3/verticals/$slug'
+      path: '/$slug'
+      fullPath: '/c3/verticals/$slug'
+      preLoaderRoute: typeof C3VerticalsSlugRouteImport
+      parentRoute: typeof C3VerticalsRoute
+    }
     '/c3/news/$slug': {
       id: '/c3/news/$slug'
       path: '/$slug'
@@ -1264,6 +1283,18 @@ const C3NewsRouteChildren: C3NewsRouteChildren = {
 const C3NewsRouteWithChildren =
   C3NewsRoute._addFileChildren(C3NewsRouteChildren)
 
+interface C3VerticalsRouteChildren {
+  C3VerticalsSlugRoute: typeof C3VerticalsSlugRoute
+}
+
+const C3VerticalsRouteChildren: C3VerticalsRouteChildren = {
+  C3VerticalsSlugRoute: C3VerticalsSlugRoute,
+}
+
+const C3VerticalsRouteWithChildren = C3VerticalsRoute._addFileChildren(
+  C3VerticalsRouteChildren,
+)
+
 interface C3RouteChildren {
   C3AboutRoute: typeof C3AboutRoute
   C3ContactRoute: typeof C3ContactRoute
@@ -1273,7 +1304,7 @@ interface C3RouteChildren {
   C3NewsRoute: typeof C3NewsRouteWithChildren
   C3OfficesRoute: typeof C3OfficesRoute
   C3TeamRoute: typeof C3TeamRoute
-  C3VerticalsRoute: typeof C3VerticalsRoute
+  C3VerticalsRoute: typeof C3VerticalsRouteWithChildren
   C3WarehousesRoute: typeof C3WarehousesRoute
   C3IndexRoute: typeof C3IndexRoute
 }
@@ -1287,7 +1318,7 @@ const C3RouteChildren: C3RouteChildren = {
   C3NewsRoute: C3NewsRouteWithChildren,
   C3OfficesRoute: C3OfficesRoute,
   C3TeamRoute: C3TeamRoute,
-  C3VerticalsRoute: C3VerticalsRoute,
+  C3VerticalsRoute: C3VerticalsRouteWithChildren,
   C3WarehousesRoute: C3WarehousesRoute,
   C3IndexRoute: C3IndexRoute,
 }
