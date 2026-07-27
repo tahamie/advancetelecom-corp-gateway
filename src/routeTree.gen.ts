@@ -65,7 +65,7 @@ import { Route as C2EventsSlugRouteImport } from './routes/c2.events_.$slug'
 import { Route as C2NewsSlugRouteImport } from './routes/c2.news_.$slug'
 import { Route as C3EventsSlugRouteImport } from './routes/c3.events_.$slug'
 import { Route as C3NewsSlugRouteImport } from './routes/c3.news_.$slug'
-import { Route as C3Verticals_SlugRouteImport } from './routes/c3.verticals__.$slug'
+import { Route as C3VerticalsSlugRouteImport } from './routes/c3.verticals_.$slug'
 import { Route as C4EventsSlugRouteImport } from './routes/c4.events_.$slug'
 import { Route as C4NewsSlugRouteImport } from './routes/c4.news_.$slug'
 
@@ -349,9 +349,9 @@ const C3NewsSlugRoute = C3NewsSlugRouteImport.update({
   path: '/news/$slug',
   getParentRoute: () => C3Route,
 } as any)
-const C3Verticals_SlugRoute = C3Verticals_SlugRouteImport.update({
-  id: '/verticals__/$slug',
-  path: '/verticals_/$slug',
+const C3VerticalsSlugRoute = C3VerticalsSlugRouteImport.update({
+  id: '/verticals_/$slug',
+  path: '/verticals/$slug',
   getParentRoute: () => C3Route,
 } as any)
 const C4EventsSlugRoute = C4EventsSlugRouteImport.update({
@@ -422,7 +422,7 @@ export interface FileRoutesByFullPath {
   '/c2/news/$slug': typeof C2NewsSlugRoute
   '/c3/events/$slug': typeof C3EventsSlugRoute
   '/c3/news/$slug': typeof C3NewsSlugRoute
-  '/c3/verticals_/$slug': typeof C3Verticals_SlugRoute
+  '/c3/verticals/$slug': typeof C3VerticalsSlugRoute
   '/c4/events/$slug': typeof C4EventsSlugRoute
   '/c4/news/$slug': typeof C4NewsSlugRoute
 }
@@ -479,7 +479,7 @@ export interface FileRoutesByTo {
   '/c2/news/$slug': typeof C2NewsSlugRoute
   '/c3/events/$slug': typeof C3EventsSlugRoute
   '/c3/news/$slug': typeof C3NewsSlugRoute
-  '/c3/verticals_/$slug': typeof C3Verticals_SlugRoute
+  '/c3/verticals/$slug': typeof C3VerticalsSlugRoute
   '/c4/events/$slug': typeof C4EventsSlugRoute
   '/c4/news/$slug': typeof C4NewsSlugRoute
 }
@@ -541,7 +541,7 @@ export interface FileRoutesById {
   '/c2/news_/$slug': typeof C2NewsSlugRoute
   '/c3/events_/$slug': typeof C3EventsSlugRoute
   '/c3/news_/$slug': typeof C3NewsSlugRoute
-  '/c3/verticals__/$slug': typeof C3Verticals_SlugRoute
+  '/c3/verticals_/$slug': typeof C3VerticalsSlugRoute
   '/c4/events_/$slug': typeof C4EventsSlugRoute
   '/c4/news_/$slug': typeof C4NewsSlugRoute
 }
@@ -604,7 +604,7 @@ export interface FileRouteTypes {
     | '/c2/news/$slug'
     | '/c3/events/$slug'
     | '/c3/news/$slug'
-    | '/c3/verticals_/$slug'
+    | '/c3/verticals/$slug'
     | '/c4/events/$slug'
     | '/c4/news/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -661,7 +661,7 @@ export interface FileRouteTypes {
     | '/c2/news/$slug'
     | '/c3/events/$slug'
     | '/c3/news/$slug'
-    | '/c3/verticals_/$slug'
+    | '/c3/verticals/$slug'
     | '/c4/events/$slug'
     | '/c4/news/$slug'
   id:
@@ -722,7 +722,7 @@ export interface FileRouteTypes {
     | '/c2/news_/$slug'
     | '/c3/events_/$slug'
     | '/c3/news_/$slug'
-    | '/c3/verticals__/$slug'
+    | '/c3/verticals_/$slug'
     | '/c4/events_/$slug'
     | '/c4/news_/$slug'
   fileRoutesById: FileRoutesById
@@ -1130,11 +1130,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof C3NewsSlugRouteImport
       parentRoute: typeof C3Route
     }
-    '/c3/verticals__/$slug': {
-      id: '/c3/verticals__/$slug'
-      path: '/verticals_/$slug'
-      fullPath: '/c3/verticals_/$slug'
-      preLoaderRoute: typeof C3Verticals_SlugRouteImport
+    '/c3/verticals_/$slug': {
+      id: '/c3/verticals_/$slug'
+      path: '/verticals/$slug'
+      fullPath: '/c3/verticals/$slug'
+      preLoaderRoute: typeof C3VerticalsSlugRouteImport
       parentRoute: typeof C3Route
     }
     '/c4/events_/$slug': {
@@ -1236,7 +1236,7 @@ interface C3RouteChildren {
   C3IndexRoute: typeof C3IndexRoute
   C3EventsSlugRoute: typeof C3EventsSlugRoute
   C3NewsSlugRoute: typeof C3NewsSlugRoute
-  C3Verticals_SlugRoute: typeof C3Verticals_SlugRoute
+  C3VerticalsSlugRoute: typeof C3VerticalsSlugRoute
 }
 
 const C3RouteChildren: C3RouteChildren = {
@@ -1253,7 +1253,7 @@ const C3RouteChildren: C3RouteChildren = {
   C3IndexRoute: C3IndexRoute,
   C3EventsSlugRoute: C3EventsSlugRoute,
   C3NewsSlugRoute: C3NewsSlugRoute,
-  C3Verticals_SlugRoute: C3Verticals_SlugRoute,
+  C3VerticalsSlugRoute: C3VerticalsSlugRoute,
 }
 
 const C3RouteWithChildren = C3Route._addFileChildren(C3RouteChildren)
