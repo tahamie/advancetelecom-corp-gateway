@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { NewsDetailSection } from "@/components/shared/Sections";
 import { getNewsBySlug } from "@/data/news";
 
-export const Route = createFileRoute("/c3/news/$slug")({
+export const Route = createFileRoute("/c2/news_/$slug")({
   loader: ({ params }) => {
     const article = getNewsBySlug(params.slug);
     if (!article) throw notFound();
@@ -27,5 +27,5 @@ export const Route = createFileRoute("/c3/news/$slug")({
 
 function Page() {
   const article = Route.useLoaderData();
-  return <NewsDetailSection base="/c3" article={article} />;
+  return <NewsDetailSection base="/c2" article={article} />;
 }

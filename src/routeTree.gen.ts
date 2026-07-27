@@ -46,6 +46,7 @@ import { Route as C3NetworkRouteImport } from './routes/c3.network'
 import { Route as C3NewsRouteImport } from './routes/c3.news'
 import { Route as C3OfficesRouteImport } from './routes/c3.offices'
 import { Route as C3TeamRouteImport } from './routes/c3.team'
+import { Route as C3VerticalsRouteImport } from './routes/c3.verticals'
 import { Route as C3WarehousesRouteImport } from './routes/c3.warehouses'
 import { Route as C4IndexRouteImport } from './routes/c4.index'
 import { Route as C4AboutRouteImport } from './routes/c4.about'
@@ -58,16 +59,15 @@ import { Route as C4OfficesRouteImport } from './routes/c4.offices'
 import { Route as C4TeamRouteImport } from './routes/c4.team'
 import { Route as C4VerticalsRouteImport } from './routes/c4.verticals'
 import { Route as C4WarehousesRouteImport } from './routes/c4.warehouses'
-import { Route as C1EventsSlugRouteImport } from './routes/c1.events.$slug'
-import { Route as C1NewsSlugRouteImport } from './routes/c1.news.$slug'
-import { Route as C2EventsSlugRouteImport } from './routes/c2.events.$slug'
-import { Route as C2NewsSlugRouteImport } from './routes/c2.news.$slug'
-import { Route as C3EventsSlugRouteImport } from './routes/c3.events.$slug'
-import { Route as C3NewsSlugRouteImport } from './routes/c3.news.$slug'
-import { Route as C3VerticalsIndexRouteImport } from './routes/c3.verticals.index'
-import { Route as C3VerticalsSlugRouteImport } from './routes/c3.verticals.$slug'
-import { Route as C4EventsSlugRouteImport } from './routes/c4.events.$slug'
-import { Route as C4NewsSlugRouteImport } from './routes/c4.news.$slug'
+import { Route as C1EventsSlugRouteImport } from './routes/c1.events_.$slug'
+import { Route as C1NewsSlugRouteImport } from './routes/c1.news_.$slug'
+import { Route as C2EventsSlugRouteImport } from './routes/c2.events_.$slug'
+import { Route as C2NewsSlugRouteImport } from './routes/c2.news_.$slug'
+import { Route as C3EventsSlugRouteImport } from './routes/c3.events_.$slug'
+import { Route as C3NewsSlugRouteImport } from './routes/c3.news_.$slug'
+import { Route as C3Verticals_SlugRouteImport } from './routes/c3.verticals__.$slug'
+import { Route as C4EventsSlugRouteImport } from './routes/c4.events_.$slug'
+import { Route as C4NewsSlugRouteImport } from './routes/c4.news_.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -254,6 +254,11 @@ const C3TeamRoute = C3TeamRouteImport.update({
   path: '/team',
   getParentRoute: () => C3Route,
 } as any)
+const C3VerticalsRoute = C3VerticalsRouteImport.update({
+  id: '/verticals',
+  path: '/verticals',
+  getParentRoute: () => C3Route,
+} as any)
 const C3WarehousesRoute = C3WarehousesRouteImport.update({
   id: '/warehouses',
   path: '/warehouses',
@@ -315,54 +320,49 @@ const C4WarehousesRoute = C4WarehousesRouteImport.update({
   getParentRoute: () => C4Route,
 } as any)
 const C1EventsSlugRoute = C1EventsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => C1EventsRoute,
+  id: '/events_/$slug',
+  path: '/events/$slug',
+  getParentRoute: () => C1Route,
 } as any)
 const C1NewsSlugRoute = C1NewsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => C1NewsRoute,
+  id: '/news_/$slug',
+  path: '/news/$slug',
+  getParentRoute: () => C1Route,
 } as any)
 const C2EventsSlugRoute = C2EventsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => C2EventsRoute,
+  id: '/events_/$slug',
+  path: '/events/$slug',
+  getParentRoute: () => C2Route,
 } as any)
 const C2NewsSlugRoute = C2NewsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => C2NewsRoute,
+  id: '/news_/$slug',
+  path: '/news/$slug',
+  getParentRoute: () => C2Route,
 } as any)
 const C3EventsSlugRoute = C3EventsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => C3EventsRoute,
-} as any)
-const C3NewsSlugRoute = C3NewsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => C3NewsRoute,
-} as any)
-const C3VerticalsIndexRoute = C3VerticalsIndexRouteImport.update({
-  id: '/verticals/',
-  path: '/verticals/',
+  id: '/events_/$slug',
+  path: '/events/$slug',
   getParentRoute: () => C3Route,
 } as any)
-const C3VerticalsSlugRoute = C3VerticalsSlugRouteImport.update({
-  id: '/verticals/$slug',
-  path: '/verticals/$slug',
+const C3NewsSlugRoute = C3NewsSlugRouteImport.update({
+  id: '/news_/$slug',
+  path: '/news/$slug',
+  getParentRoute: () => C3Route,
+} as any)
+const C3Verticals_SlugRoute = C3Verticals_SlugRouteImport.update({
+  id: '/verticals__/$slug',
+  path: '/verticals_/$slug',
   getParentRoute: () => C3Route,
 } as any)
 const C4EventsSlugRoute = C4EventsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => C4EventsRoute,
+  id: '/events_/$slug',
+  path: '/events/$slug',
+  getParentRoute: () => C4Route,
 } as any)
 const C4NewsSlugRoute = C4NewsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => C4NewsRoute,
+  id: '/news_/$slug',
+  path: '/news/$slug',
+  getParentRoute: () => C4Route,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -374,39 +374,40 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/c1/about': typeof C1AboutRoute
   '/c1/contact': typeof C1ContactRoute
-  '/c1/events': typeof C1EventsRouteWithChildren
+  '/c1/events': typeof C1EventsRoute
   '/c1/journey': typeof C1JourneyRoute
   '/c1/network': typeof C1NetworkRoute
-  '/c1/news': typeof C1NewsRouteWithChildren
+  '/c1/news': typeof C1NewsRoute
   '/c1/offices': typeof C1OfficesRoute
   '/c1/team': typeof C1TeamRoute
   '/c1/verticals': typeof C1VerticalsRoute
   '/c1/warehouses': typeof C1WarehousesRoute
   '/c2/about': typeof C2AboutRoute
   '/c2/contact': typeof C2ContactRoute
-  '/c2/events': typeof C2EventsRouteWithChildren
+  '/c2/events': typeof C2EventsRoute
   '/c2/journey': typeof C2JourneyRoute
   '/c2/network': typeof C2NetworkRoute
-  '/c2/news': typeof C2NewsRouteWithChildren
+  '/c2/news': typeof C2NewsRoute
   '/c2/offices': typeof C2OfficesRoute
   '/c2/team': typeof C2TeamRoute
   '/c2/verticals': typeof C2VerticalsRoute
   '/c2/warehouses': typeof C2WarehousesRoute
   '/c3/about': typeof C3AboutRoute
   '/c3/contact': typeof C3ContactRoute
-  '/c3/events': typeof C3EventsRouteWithChildren
+  '/c3/events': typeof C3EventsRoute
   '/c3/journey': typeof C3JourneyRoute
   '/c3/network': typeof C3NetworkRoute
-  '/c3/news': typeof C3NewsRouteWithChildren
+  '/c3/news': typeof C3NewsRoute
   '/c3/offices': typeof C3OfficesRoute
   '/c3/team': typeof C3TeamRoute
+  '/c3/verticals': typeof C3VerticalsRoute
   '/c3/warehouses': typeof C3WarehousesRoute
   '/c4/about': typeof C4AboutRoute
   '/c4/contact': typeof C4ContactRoute
-  '/c4/events': typeof C4EventsRouteWithChildren
+  '/c4/events': typeof C4EventsRoute
   '/c4/journey': typeof C4JourneyRoute
   '/c4/network': typeof C4NetworkRoute
-  '/c4/news': typeof C4NewsRouteWithChildren
+  '/c4/news': typeof C4NewsRoute
   '/c4/offices': typeof C4OfficesRoute
   '/c4/team': typeof C4TeamRoute
   '/c4/verticals': typeof C4VerticalsRoute
@@ -421,49 +422,49 @@ export interface FileRoutesByFullPath {
   '/c2/news/$slug': typeof C2NewsSlugRoute
   '/c3/events/$slug': typeof C3EventsSlugRoute
   '/c3/news/$slug': typeof C3NewsSlugRoute
-  '/c3/verticals/$slug': typeof C3VerticalsSlugRoute
+  '/c3/verticals_/$slug': typeof C3Verticals_SlugRoute
   '/c4/events/$slug': typeof C4EventsSlugRoute
   '/c4/news/$slug': typeof C4NewsSlugRoute
-  '/c3/verticals/': typeof C3VerticalsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/c1/about': typeof C1AboutRoute
   '/c1/contact': typeof C1ContactRoute
-  '/c1/events': typeof C1EventsRouteWithChildren
+  '/c1/events': typeof C1EventsRoute
   '/c1/journey': typeof C1JourneyRoute
   '/c1/network': typeof C1NetworkRoute
-  '/c1/news': typeof C1NewsRouteWithChildren
+  '/c1/news': typeof C1NewsRoute
   '/c1/offices': typeof C1OfficesRoute
   '/c1/team': typeof C1TeamRoute
   '/c1/verticals': typeof C1VerticalsRoute
   '/c1/warehouses': typeof C1WarehousesRoute
   '/c2/about': typeof C2AboutRoute
   '/c2/contact': typeof C2ContactRoute
-  '/c2/events': typeof C2EventsRouteWithChildren
+  '/c2/events': typeof C2EventsRoute
   '/c2/journey': typeof C2JourneyRoute
   '/c2/network': typeof C2NetworkRoute
-  '/c2/news': typeof C2NewsRouteWithChildren
+  '/c2/news': typeof C2NewsRoute
   '/c2/offices': typeof C2OfficesRoute
   '/c2/team': typeof C2TeamRoute
   '/c2/verticals': typeof C2VerticalsRoute
   '/c2/warehouses': typeof C2WarehousesRoute
   '/c3/about': typeof C3AboutRoute
   '/c3/contact': typeof C3ContactRoute
-  '/c3/events': typeof C3EventsRouteWithChildren
+  '/c3/events': typeof C3EventsRoute
   '/c3/journey': typeof C3JourneyRoute
   '/c3/network': typeof C3NetworkRoute
-  '/c3/news': typeof C3NewsRouteWithChildren
+  '/c3/news': typeof C3NewsRoute
   '/c3/offices': typeof C3OfficesRoute
   '/c3/team': typeof C3TeamRoute
+  '/c3/verticals': typeof C3VerticalsRoute
   '/c3/warehouses': typeof C3WarehousesRoute
   '/c4/about': typeof C4AboutRoute
   '/c4/contact': typeof C4ContactRoute
-  '/c4/events': typeof C4EventsRouteWithChildren
+  '/c4/events': typeof C4EventsRoute
   '/c4/journey': typeof C4JourneyRoute
   '/c4/network': typeof C4NetworkRoute
-  '/c4/news': typeof C4NewsRouteWithChildren
+  '/c4/news': typeof C4NewsRoute
   '/c4/offices': typeof C4OfficesRoute
   '/c4/team': typeof C4TeamRoute
   '/c4/verticals': typeof C4VerticalsRoute
@@ -478,10 +479,9 @@ export interface FileRoutesByTo {
   '/c2/news/$slug': typeof C2NewsSlugRoute
   '/c3/events/$slug': typeof C3EventsSlugRoute
   '/c3/news/$slug': typeof C3NewsSlugRoute
-  '/c3/verticals/$slug': typeof C3VerticalsSlugRoute
+  '/c3/verticals_/$slug': typeof C3Verticals_SlugRoute
   '/c4/events/$slug': typeof C4EventsSlugRoute
   '/c4/news/$slug': typeof C4NewsSlugRoute
-  '/c3/verticals': typeof C3VerticalsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -493,39 +493,40 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/c1/about': typeof C1AboutRoute
   '/c1/contact': typeof C1ContactRoute
-  '/c1/events': typeof C1EventsRouteWithChildren
+  '/c1/events': typeof C1EventsRoute
   '/c1/journey': typeof C1JourneyRoute
   '/c1/network': typeof C1NetworkRoute
-  '/c1/news': typeof C1NewsRouteWithChildren
+  '/c1/news': typeof C1NewsRoute
   '/c1/offices': typeof C1OfficesRoute
   '/c1/team': typeof C1TeamRoute
   '/c1/verticals': typeof C1VerticalsRoute
   '/c1/warehouses': typeof C1WarehousesRoute
   '/c2/about': typeof C2AboutRoute
   '/c2/contact': typeof C2ContactRoute
-  '/c2/events': typeof C2EventsRouteWithChildren
+  '/c2/events': typeof C2EventsRoute
   '/c2/journey': typeof C2JourneyRoute
   '/c2/network': typeof C2NetworkRoute
-  '/c2/news': typeof C2NewsRouteWithChildren
+  '/c2/news': typeof C2NewsRoute
   '/c2/offices': typeof C2OfficesRoute
   '/c2/team': typeof C2TeamRoute
   '/c2/verticals': typeof C2VerticalsRoute
   '/c2/warehouses': typeof C2WarehousesRoute
   '/c3/about': typeof C3AboutRoute
   '/c3/contact': typeof C3ContactRoute
-  '/c3/events': typeof C3EventsRouteWithChildren
+  '/c3/events': typeof C3EventsRoute
   '/c3/journey': typeof C3JourneyRoute
   '/c3/network': typeof C3NetworkRoute
-  '/c3/news': typeof C3NewsRouteWithChildren
+  '/c3/news': typeof C3NewsRoute
   '/c3/offices': typeof C3OfficesRoute
   '/c3/team': typeof C3TeamRoute
+  '/c3/verticals': typeof C3VerticalsRoute
   '/c3/warehouses': typeof C3WarehousesRoute
   '/c4/about': typeof C4AboutRoute
   '/c4/contact': typeof C4ContactRoute
-  '/c4/events': typeof C4EventsRouteWithChildren
+  '/c4/events': typeof C4EventsRoute
   '/c4/journey': typeof C4JourneyRoute
   '/c4/network': typeof C4NetworkRoute
-  '/c4/news': typeof C4NewsRouteWithChildren
+  '/c4/news': typeof C4NewsRoute
   '/c4/offices': typeof C4OfficesRoute
   '/c4/team': typeof C4TeamRoute
   '/c4/verticals': typeof C4VerticalsRoute
@@ -534,16 +535,15 @@ export interface FileRoutesById {
   '/c2/': typeof C2IndexRoute
   '/c3/': typeof C3IndexRoute
   '/c4/': typeof C4IndexRoute
-  '/c1/events/$slug': typeof C1EventsSlugRoute
-  '/c1/news/$slug': typeof C1NewsSlugRoute
-  '/c2/events/$slug': typeof C2EventsSlugRoute
-  '/c2/news/$slug': typeof C2NewsSlugRoute
-  '/c3/events/$slug': typeof C3EventsSlugRoute
-  '/c3/news/$slug': typeof C3NewsSlugRoute
-  '/c3/verticals/$slug': typeof C3VerticalsSlugRoute
-  '/c4/events/$slug': typeof C4EventsSlugRoute
-  '/c4/news/$slug': typeof C4NewsSlugRoute
-  '/c3/verticals/': typeof C3VerticalsIndexRoute
+  '/c1/events_/$slug': typeof C1EventsSlugRoute
+  '/c1/news_/$slug': typeof C1NewsSlugRoute
+  '/c2/events_/$slug': typeof C2EventsSlugRoute
+  '/c2/news_/$slug': typeof C2NewsSlugRoute
+  '/c3/events_/$slug': typeof C3EventsSlugRoute
+  '/c3/news_/$slug': typeof C3NewsSlugRoute
+  '/c3/verticals__/$slug': typeof C3Verticals_SlugRoute
+  '/c4/events_/$slug': typeof C4EventsSlugRoute
+  '/c4/news_/$slug': typeof C4NewsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -582,6 +582,7 @@ export interface FileRouteTypes {
     | '/c3/news'
     | '/c3/offices'
     | '/c3/team'
+    | '/c3/verticals'
     | '/c3/warehouses'
     | '/c4/about'
     | '/c4/contact'
@@ -603,10 +604,9 @@ export interface FileRouteTypes {
     | '/c2/news/$slug'
     | '/c3/events/$slug'
     | '/c3/news/$slug'
-    | '/c3/verticals/$slug'
+    | '/c3/verticals_/$slug'
     | '/c4/events/$slug'
     | '/c4/news/$slug'
-    | '/c3/verticals/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -639,6 +639,7 @@ export interface FileRouteTypes {
     | '/c3/news'
     | '/c3/offices'
     | '/c3/team'
+    | '/c3/verticals'
     | '/c3/warehouses'
     | '/c4/about'
     | '/c4/contact'
@@ -660,10 +661,9 @@ export interface FileRouteTypes {
     | '/c2/news/$slug'
     | '/c3/events/$slug'
     | '/c3/news/$slug'
-    | '/c3/verticals/$slug'
+    | '/c3/verticals_/$slug'
     | '/c4/events/$slug'
     | '/c4/news/$slug'
-    | '/c3/verticals'
   id:
     | '__root__'
     | '/'
@@ -700,6 +700,7 @@ export interface FileRouteTypes {
     | '/c3/news'
     | '/c3/offices'
     | '/c3/team'
+    | '/c3/verticals'
     | '/c3/warehouses'
     | '/c4/about'
     | '/c4/contact'
@@ -715,16 +716,15 @@ export interface FileRouteTypes {
     | '/c2/'
     | '/c3/'
     | '/c4/'
-    | '/c1/events/$slug'
-    | '/c1/news/$slug'
-    | '/c2/events/$slug'
-    | '/c2/news/$slug'
-    | '/c3/events/$slug'
-    | '/c3/news/$slug'
-    | '/c3/verticals/$slug'
-    | '/c4/events/$slug'
-    | '/c4/news/$slug'
-    | '/c3/verticals/'
+    | '/c1/events_/$slug'
+    | '/c1/news_/$slug'
+    | '/c2/events_/$slug'
+    | '/c2/news_/$slug'
+    | '/c3/events_/$slug'
+    | '/c3/news_/$slug'
+    | '/c3/verticals__/$slug'
+    | '/c4/events_/$slug'
+    | '/c4/news_/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -997,6 +997,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof C3TeamRouteImport
       parentRoute: typeof C3Route
     }
+    '/c3/verticals': {
+      id: '/c3/verticals'
+      path: '/verticals'
+      fullPath: '/c3/verticals'
+      preLoaderRoute: typeof C3VerticalsRouteImport
+      parentRoute: typeof C3Route
+    }
     '/c3/warehouses': {
       id: '/c3/warehouses'
       path: '/warehouses'
@@ -1081,289 +1088,206 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof C4WarehousesRouteImport
       parentRoute: typeof C4Route
     }
-    '/c1/events/$slug': {
-      id: '/c1/events/$slug'
-      path: '/$slug'
+    '/c1/events_/$slug': {
+      id: '/c1/events_/$slug'
+      path: '/events/$slug'
       fullPath: '/c1/events/$slug'
       preLoaderRoute: typeof C1EventsSlugRouteImport
-      parentRoute: typeof C1EventsRoute
+      parentRoute: typeof C1Route
     }
-    '/c1/news/$slug': {
-      id: '/c1/news/$slug'
-      path: '/$slug'
+    '/c1/news_/$slug': {
+      id: '/c1/news_/$slug'
+      path: '/news/$slug'
       fullPath: '/c1/news/$slug'
       preLoaderRoute: typeof C1NewsSlugRouteImport
-      parentRoute: typeof C1NewsRoute
+      parentRoute: typeof C1Route
     }
-    '/c2/events/$slug': {
-      id: '/c2/events/$slug'
-      path: '/$slug'
+    '/c2/events_/$slug': {
+      id: '/c2/events_/$slug'
+      path: '/events/$slug'
       fullPath: '/c2/events/$slug'
       preLoaderRoute: typeof C2EventsSlugRouteImport
-      parentRoute: typeof C2EventsRoute
+      parentRoute: typeof C2Route
     }
-    '/c2/news/$slug': {
-      id: '/c2/news/$slug'
-      path: '/$slug'
+    '/c2/news_/$slug': {
+      id: '/c2/news_/$slug'
+      path: '/news/$slug'
       fullPath: '/c2/news/$slug'
       preLoaderRoute: typeof C2NewsSlugRouteImport
-      parentRoute: typeof C2NewsRoute
+      parentRoute: typeof C2Route
     }
-    '/c3/events/$slug': {
-      id: '/c3/events/$slug'
-      path: '/$slug'
+    '/c3/events_/$slug': {
+      id: '/c3/events_/$slug'
+      path: '/events/$slug'
       fullPath: '/c3/events/$slug'
       preLoaderRoute: typeof C3EventsSlugRouteImport
-      parentRoute: typeof C3EventsRoute
+      parentRoute: typeof C3Route
     }
-    '/c3/news/$slug': {
-      id: '/c3/news/$slug'
-      path: '/$slug'
+    '/c3/news_/$slug': {
+      id: '/c3/news_/$slug'
+      path: '/news/$slug'
       fullPath: '/c3/news/$slug'
       preLoaderRoute: typeof C3NewsSlugRouteImport
-      parentRoute: typeof C3NewsRoute
-    }
-    '/c3/verticals/': {
-      id: '/c3/verticals/'
-      path: '/verticals'
-      fullPath: '/c3/verticals/'
-      preLoaderRoute: typeof C3VerticalsIndexRouteImport
       parentRoute: typeof C3Route
     }
-    '/c3/verticals/$slug': {
-      id: '/c3/verticals/$slug'
-      path: '/verticals/$slug'
-      fullPath: '/c3/verticals/$slug'
-      preLoaderRoute: typeof C3VerticalsSlugRouteImport
+    '/c3/verticals__/$slug': {
+      id: '/c3/verticals__/$slug'
+      path: '/verticals_/$slug'
+      fullPath: '/c3/verticals_/$slug'
+      preLoaderRoute: typeof C3Verticals_SlugRouteImport
       parentRoute: typeof C3Route
     }
-    '/c4/events/$slug': {
-      id: '/c4/events/$slug'
-      path: '/$slug'
+    '/c4/events_/$slug': {
+      id: '/c4/events_/$slug'
+      path: '/events/$slug'
       fullPath: '/c4/events/$slug'
       preLoaderRoute: typeof C4EventsSlugRouteImport
-      parentRoute: typeof C4EventsRoute
+      parentRoute: typeof C4Route
     }
-    '/c4/news/$slug': {
-      id: '/c4/news/$slug'
-      path: '/$slug'
+    '/c4/news_/$slug': {
+      id: '/c4/news_/$slug'
+      path: '/news/$slug'
       fullPath: '/c4/news/$slug'
       preLoaderRoute: typeof C4NewsSlugRouteImport
-      parentRoute: typeof C4NewsRoute
+      parentRoute: typeof C4Route
     }
   }
 }
 
-interface C1EventsRouteChildren {
-  C1EventsSlugRoute: typeof C1EventsSlugRoute
-}
-
-const C1EventsRouteChildren: C1EventsRouteChildren = {
-  C1EventsSlugRoute: C1EventsSlugRoute,
-}
-
-const C1EventsRouteWithChildren = C1EventsRoute._addFileChildren(
-  C1EventsRouteChildren,
-)
-
-interface C1NewsRouteChildren {
-  C1NewsSlugRoute: typeof C1NewsSlugRoute
-}
-
-const C1NewsRouteChildren: C1NewsRouteChildren = {
-  C1NewsSlugRoute: C1NewsSlugRoute,
-}
-
-const C1NewsRouteWithChildren =
-  C1NewsRoute._addFileChildren(C1NewsRouteChildren)
-
 interface C1RouteChildren {
   C1AboutRoute: typeof C1AboutRoute
   C1ContactRoute: typeof C1ContactRoute
-  C1EventsRoute: typeof C1EventsRouteWithChildren
+  C1EventsRoute: typeof C1EventsRoute
   C1JourneyRoute: typeof C1JourneyRoute
   C1NetworkRoute: typeof C1NetworkRoute
-  C1NewsRoute: typeof C1NewsRouteWithChildren
+  C1NewsRoute: typeof C1NewsRoute
   C1OfficesRoute: typeof C1OfficesRoute
   C1TeamRoute: typeof C1TeamRoute
   C1VerticalsRoute: typeof C1VerticalsRoute
   C1WarehousesRoute: typeof C1WarehousesRoute
   C1IndexRoute: typeof C1IndexRoute
+  C1EventsSlugRoute: typeof C1EventsSlugRoute
+  C1NewsSlugRoute: typeof C1NewsSlugRoute
 }
 
 const C1RouteChildren: C1RouteChildren = {
   C1AboutRoute: C1AboutRoute,
   C1ContactRoute: C1ContactRoute,
-  C1EventsRoute: C1EventsRouteWithChildren,
+  C1EventsRoute: C1EventsRoute,
   C1JourneyRoute: C1JourneyRoute,
   C1NetworkRoute: C1NetworkRoute,
-  C1NewsRoute: C1NewsRouteWithChildren,
+  C1NewsRoute: C1NewsRoute,
   C1OfficesRoute: C1OfficesRoute,
   C1TeamRoute: C1TeamRoute,
   C1VerticalsRoute: C1VerticalsRoute,
   C1WarehousesRoute: C1WarehousesRoute,
   C1IndexRoute: C1IndexRoute,
+  C1EventsSlugRoute: C1EventsSlugRoute,
+  C1NewsSlugRoute: C1NewsSlugRoute,
 }
 
 const C1RouteWithChildren = C1Route._addFileChildren(C1RouteChildren)
 
-interface C2EventsRouteChildren {
-  C2EventsSlugRoute: typeof C2EventsSlugRoute
-}
-
-const C2EventsRouteChildren: C2EventsRouteChildren = {
-  C2EventsSlugRoute: C2EventsSlugRoute,
-}
-
-const C2EventsRouteWithChildren = C2EventsRoute._addFileChildren(
-  C2EventsRouteChildren,
-)
-
-interface C2NewsRouteChildren {
-  C2NewsSlugRoute: typeof C2NewsSlugRoute
-}
-
-const C2NewsRouteChildren: C2NewsRouteChildren = {
-  C2NewsSlugRoute: C2NewsSlugRoute,
-}
-
-const C2NewsRouteWithChildren =
-  C2NewsRoute._addFileChildren(C2NewsRouteChildren)
-
 interface C2RouteChildren {
   C2AboutRoute: typeof C2AboutRoute
   C2ContactRoute: typeof C2ContactRoute
-  C2EventsRoute: typeof C2EventsRouteWithChildren
+  C2EventsRoute: typeof C2EventsRoute
   C2JourneyRoute: typeof C2JourneyRoute
   C2NetworkRoute: typeof C2NetworkRoute
-  C2NewsRoute: typeof C2NewsRouteWithChildren
+  C2NewsRoute: typeof C2NewsRoute
   C2OfficesRoute: typeof C2OfficesRoute
   C2TeamRoute: typeof C2TeamRoute
   C2VerticalsRoute: typeof C2VerticalsRoute
   C2WarehousesRoute: typeof C2WarehousesRoute
   C2IndexRoute: typeof C2IndexRoute
+  C2EventsSlugRoute: typeof C2EventsSlugRoute
+  C2NewsSlugRoute: typeof C2NewsSlugRoute
 }
 
 const C2RouteChildren: C2RouteChildren = {
   C2AboutRoute: C2AboutRoute,
   C2ContactRoute: C2ContactRoute,
-  C2EventsRoute: C2EventsRouteWithChildren,
+  C2EventsRoute: C2EventsRoute,
   C2JourneyRoute: C2JourneyRoute,
   C2NetworkRoute: C2NetworkRoute,
-  C2NewsRoute: C2NewsRouteWithChildren,
+  C2NewsRoute: C2NewsRoute,
   C2OfficesRoute: C2OfficesRoute,
   C2TeamRoute: C2TeamRoute,
   C2VerticalsRoute: C2VerticalsRoute,
   C2WarehousesRoute: C2WarehousesRoute,
   C2IndexRoute: C2IndexRoute,
+  C2EventsSlugRoute: C2EventsSlugRoute,
+  C2NewsSlugRoute: C2NewsSlugRoute,
 }
 
 const C2RouteWithChildren = C2Route._addFileChildren(C2RouteChildren)
 
-interface C3EventsRouteChildren {
-  C3EventsSlugRoute: typeof C3EventsSlugRoute
-}
-
-const C3EventsRouteChildren: C3EventsRouteChildren = {
-  C3EventsSlugRoute: C3EventsSlugRoute,
-}
-
-const C3EventsRouteWithChildren = C3EventsRoute._addFileChildren(
-  C3EventsRouteChildren,
-)
-
-interface C3NewsRouteChildren {
-  C3NewsSlugRoute: typeof C3NewsSlugRoute
-}
-
-const C3NewsRouteChildren: C3NewsRouteChildren = {
-  C3NewsSlugRoute: C3NewsSlugRoute,
-}
-
-const C3NewsRouteWithChildren =
-  C3NewsRoute._addFileChildren(C3NewsRouteChildren)
-
 interface C3RouteChildren {
   C3AboutRoute: typeof C3AboutRoute
   C3ContactRoute: typeof C3ContactRoute
-  C3EventsRoute: typeof C3EventsRouteWithChildren
+  C3EventsRoute: typeof C3EventsRoute
   C3JourneyRoute: typeof C3JourneyRoute
   C3NetworkRoute: typeof C3NetworkRoute
-  C3NewsRoute: typeof C3NewsRouteWithChildren
+  C3NewsRoute: typeof C3NewsRoute
   C3OfficesRoute: typeof C3OfficesRoute
   C3TeamRoute: typeof C3TeamRoute
+  C3VerticalsRoute: typeof C3VerticalsRoute
   C3WarehousesRoute: typeof C3WarehousesRoute
   C3IndexRoute: typeof C3IndexRoute
-  C3VerticalsSlugRoute: typeof C3VerticalsSlugRoute
-  C3VerticalsIndexRoute: typeof C3VerticalsIndexRoute
+  C3EventsSlugRoute: typeof C3EventsSlugRoute
+  C3NewsSlugRoute: typeof C3NewsSlugRoute
+  C3Verticals_SlugRoute: typeof C3Verticals_SlugRoute
 }
 
 const C3RouteChildren: C3RouteChildren = {
   C3AboutRoute: C3AboutRoute,
   C3ContactRoute: C3ContactRoute,
-  C3EventsRoute: C3EventsRouteWithChildren,
+  C3EventsRoute: C3EventsRoute,
   C3JourneyRoute: C3JourneyRoute,
   C3NetworkRoute: C3NetworkRoute,
-  C3NewsRoute: C3NewsRouteWithChildren,
+  C3NewsRoute: C3NewsRoute,
   C3OfficesRoute: C3OfficesRoute,
   C3TeamRoute: C3TeamRoute,
+  C3VerticalsRoute: C3VerticalsRoute,
   C3WarehousesRoute: C3WarehousesRoute,
   C3IndexRoute: C3IndexRoute,
-  C3VerticalsSlugRoute: C3VerticalsSlugRoute,
-  C3VerticalsIndexRoute: C3VerticalsIndexRoute,
+  C3EventsSlugRoute: C3EventsSlugRoute,
+  C3NewsSlugRoute: C3NewsSlugRoute,
+  C3Verticals_SlugRoute: C3Verticals_SlugRoute,
 }
 
 const C3RouteWithChildren = C3Route._addFileChildren(C3RouteChildren)
 
-interface C4EventsRouteChildren {
-  C4EventsSlugRoute: typeof C4EventsSlugRoute
-}
-
-const C4EventsRouteChildren: C4EventsRouteChildren = {
-  C4EventsSlugRoute: C4EventsSlugRoute,
-}
-
-const C4EventsRouteWithChildren = C4EventsRoute._addFileChildren(
-  C4EventsRouteChildren,
-)
-
-interface C4NewsRouteChildren {
-  C4NewsSlugRoute: typeof C4NewsSlugRoute
-}
-
-const C4NewsRouteChildren: C4NewsRouteChildren = {
-  C4NewsSlugRoute: C4NewsSlugRoute,
-}
-
-const C4NewsRouteWithChildren =
-  C4NewsRoute._addFileChildren(C4NewsRouteChildren)
-
 interface C4RouteChildren {
   C4AboutRoute: typeof C4AboutRoute
   C4ContactRoute: typeof C4ContactRoute
-  C4EventsRoute: typeof C4EventsRouteWithChildren
+  C4EventsRoute: typeof C4EventsRoute
   C4JourneyRoute: typeof C4JourneyRoute
   C4NetworkRoute: typeof C4NetworkRoute
-  C4NewsRoute: typeof C4NewsRouteWithChildren
+  C4NewsRoute: typeof C4NewsRoute
   C4OfficesRoute: typeof C4OfficesRoute
   C4TeamRoute: typeof C4TeamRoute
   C4VerticalsRoute: typeof C4VerticalsRoute
   C4WarehousesRoute: typeof C4WarehousesRoute
   C4IndexRoute: typeof C4IndexRoute
+  C4EventsSlugRoute: typeof C4EventsSlugRoute
+  C4NewsSlugRoute: typeof C4NewsSlugRoute
 }
 
 const C4RouteChildren: C4RouteChildren = {
   C4AboutRoute: C4AboutRoute,
   C4ContactRoute: C4ContactRoute,
-  C4EventsRoute: C4EventsRouteWithChildren,
+  C4EventsRoute: C4EventsRoute,
   C4JourneyRoute: C4JourneyRoute,
   C4NetworkRoute: C4NetworkRoute,
-  C4NewsRoute: C4NewsRouteWithChildren,
+  C4NewsRoute: C4NewsRoute,
   C4OfficesRoute: C4OfficesRoute,
   C4TeamRoute: C4TeamRoute,
   C4VerticalsRoute: C4VerticalsRoute,
   C4WarehousesRoute: C4WarehousesRoute,
   C4IndexRoute: C4IndexRoute,
+  C4EventsSlugRoute: C4EventsSlugRoute,
+  C4NewsSlugRoute: C4NewsSlugRoute,
 }
 
 const C4RouteWithChildren = C4Route._addFileChildren(C4RouteChildren)

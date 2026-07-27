@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { EventDetailSection } from "@/components/shared/Sections";
 import { getEventBySlug } from "@/data/events";
 
-export const Route = createFileRoute("/c3/events/$slug")({
+export const Route = createFileRoute("/c2/events_/$slug")({
   loader: ({ params }) => {
     const event = getEventBySlug(params.slug);
     if (!event) throw notFound();
@@ -27,5 +27,5 @@ export const Route = createFileRoute("/c3/events/$slug")({
 
 function Page() {
   const event = Route.useLoaderData();
-  return <EventDetailSection base="/c3" event={event} />;
+  return <EventDetailSection base="/c2" event={event} />;
 }

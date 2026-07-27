@@ -6,7 +6,7 @@ import type React from "react";
 
 const Link = TSLink as unknown as React.FC<any>;
 
-export const Route = createFileRoute("/c3/verticals/$slug")({
+export const Route = createFileRoute("/c3/verticals__/$slug")({
   loader: ({ params }) => {
     const vertical = VERTICALS.find((v) => v.slug === params.slug);
     if (!vertical) throw notFound();
