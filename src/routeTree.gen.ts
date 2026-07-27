@@ -9,84 +9,69 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as C1RouteImport } from './routes/c1'
-import { Route as C2RouteImport } from './routes/c2'
-import { Route as C3RouteImport } from './routes/c3'
-import { Route as C4RouteImport } from './routes/c4'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as C1IndexRouteImport } from './routes/c1.index'
-import { Route as C1AboutRouteImport } from './routes/c1.about'
-import { Route as C1ContactRouteImport } from './routes/c1.contact'
-import { Route as C1EventsRouteImport } from './routes/c1.events'
-import { Route as C1JourneyRouteImport } from './routes/c1.journey'
-import { Route as C1NetworkRouteImport } from './routes/c1.network'
-import { Route as C1NewsRouteImport } from './routes/c1.news'
-import { Route as C1OfficesRouteImport } from './routes/c1.offices'
-import { Route as C1TeamRouteImport } from './routes/c1.team'
-import { Route as C1VerticalsRouteImport } from './routes/c1.verticals'
-import { Route as C1WarehousesRouteImport } from './routes/c1.warehouses'
-import { Route as C2IndexRouteImport } from './routes/c2.index'
-import { Route as C2AboutRouteImport } from './routes/c2.about'
-import { Route as C2ContactRouteImport } from './routes/c2.contact'
-import { Route as C2EventsRouteImport } from './routes/c2.events'
-import { Route as C2JourneyRouteImport } from './routes/c2.journey'
-import { Route as C2NetworkRouteImport } from './routes/c2.network'
-import { Route as C2NewsRouteImport } from './routes/c2.news'
-import { Route as C2OfficesRouteImport } from './routes/c2.offices'
-import { Route as C2TeamRouteImport } from './routes/c2.team'
-import { Route as C2VerticalsRouteImport } from './routes/c2.verticals'
-import { Route as C2WarehousesRouteImport } from './routes/c2.warehouses'
-import { Route as C3IndexRouteImport } from './routes/c3.index'
-import { Route as C3AboutRouteImport } from './routes/c3.about'
-import { Route as C3ContactRouteImport } from './routes/c3.contact'
-import { Route as C3EventsRouteImport } from './routes/c3.events'
-import { Route as C3JourneyRouteImport } from './routes/c3.journey'
-import { Route as C3NetworkRouteImport } from './routes/c3.network'
-import { Route as C3NewsRouteImport } from './routes/c3.news'
-import { Route as C3OfficesRouteImport } from './routes/c3.offices'
-import { Route as C3TeamRouteImport } from './routes/c3.team'
-import { Route as C3VerticalsRouteImport } from './routes/c3.verticals'
-import { Route as C3WarehousesRouteImport } from './routes/c3.warehouses'
+import { Route as C4RouteImport } from './routes/c4'
+import { Route as C3RouteImport } from './routes/c3'
+import { Route as C2RouteImport } from './routes/c2'
+import { Route as C1RouteImport } from './routes/c1'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as C4IndexRouteImport } from './routes/c4.index'
-import { Route as C4AboutRouteImport } from './routes/c4.about'
-import { Route as C4ContactRouteImport } from './routes/c4.contact'
-import { Route as C4EventsRouteImport } from './routes/c4.events'
-import { Route as C4JourneyRouteImport } from './routes/c4.journey'
-import { Route as C4NetworkRouteImport } from './routes/c4.network'
-import { Route as C4NewsRouteImport } from './routes/c4.news'
-import { Route as C4OfficesRouteImport } from './routes/c4.offices'
-import { Route as C4TeamRouteImport } from './routes/c4.team'
-import { Route as C4VerticalsRouteImport } from './routes/c4.verticals'
+import { Route as C3IndexRouteImport } from './routes/c3.index'
+import { Route as C2IndexRouteImport } from './routes/c2.index'
+import { Route as C1IndexRouteImport } from './routes/c1.index'
 import { Route as C4WarehousesRouteImport } from './routes/c4.warehouses'
-import { Route as C1EventsSlugRouteImport } from './routes/c1.events_.$slug'
-import { Route as C1NewsSlugRouteImport } from './routes/c1.news_.$slug'
-import { Route as C2EventsSlugRouteImport } from './routes/c2.events_.$slug'
-import { Route as C2NewsSlugRouteImport } from './routes/c2.news_.$slug'
-import { Route as C3EventsSlugRouteImport } from './routes/c3.events_.$slug'
-import { Route as C3NewsSlugRouteImport } from './routes/c3.news_.$slug'
-import { Route as C3VerticalsSlugRouteImport } from './routes/c3.verticals_.$slug'
-import { Route as C4EventsSlugRouteImport } from './routes/c4.events_.$slug'
+import { Route as C4VerticalsRouteImport } from './routes/c4.verticals'
+import { Route as C4TeamRouteImport } from './routes/c4.team'
+import { Route as C4OfficesRouteImport } from './routes/c4.offices'
+import { Route as C4NewsRouteImport } from './routes/c4.news'
+import { Route as C4NetworkRouteImport } from './routes/c4.network'
+import { Route as C4JourneyRouteImport } from './routes/c4.journey'
+import { Route as C4EventsRouteImport } from './routes/c4.events'
+import { Route as C4ContactRouteImport } from './routes/c4.contact'
+import { Route as C4AboutRouteImport } from './routes/c4.about'
+import { Route as C3WarehousesRouteImport } from './routes/c3.warehouses'
+import { Route as C3VerticalsRouteImport } from './routes/c3.verticals'
+import { Route as C3TeamRouteImport } from './routes/c3.team'
+import { Route as C3OfficesRouteImport } from './routes/c3.offices'
+import { Route as C3NewsRouteImport } from './routes/c3.news'
+import { Route as C3NetworkRouteImport } from './routes/c3.network'
+import { Route as C3JourneyRouteImport } from './routes/c3.journey'
+import { Route as C3EventsRouteImport } from './routes/c3.events'
+import { Route as C3ContactRouteImport } from './routes/c3.contact'
+import { Route as C3AboutRouteImport } from './routes/c3.about'
+import { Route as C2WarehousesRouteImport } from './routes/c2.warehouses'
+import { Route as C2VerticalsRouteImport } from './routes/c2.verticals'
+import { Route as C2TeamRouteImport } from './routes/c2.team'
+import { Route as C2OfficesRouteImport } from './routes/c2.offices'
+import { Route as C2NewsRouteImport } from './routes/c2.news'
+import { Route as C2NetworkRouteImport } from './routes/c2.network'
+import { Route as C2JourneyRouteImport } from './routes/c2.journey'
+import { Route as C2EventsRouteImport } from './routes/c2.events'
+import { Route as C2ContactRouteImport } from './routes/c2.contact'
+import { Route as C2AboutRouteImport } from './routes/c2.about'
+import { Route as C1WarehousesRouteImport } from './routes/c1.warehouses'
+import { Route as C1VerticalsRouteImport } from './routes/c1.verticals'
+import { Route as C1TeamRouteImport } from './routes/c1.team'
+import { Route as C1OfficesRouteImport } from './routes/c1.offices'
+import { Route as C1NewsRouteImport } from './routes/c1.news'
+import { Route as C1NetworkRouteImport } from './routes/c1.network'
+import { Route as C1JourneyRouteImport } from './routes/c1.journey'
+import { Route as C1EventsRouteImport } from './routes/c1.events'
+import { Route as C1ContactRouteImport } from './routes/c1.contact'
+import { Route as C1AboutRouteImport } from './routes/c1.about'
 import { Route as C4NewsSlugRouteImport } from './routes/c4.news_.$slug'
+import { Route as C4EventsSlugRouteImport } from './routes/c4.events_.$slug'
+import { Route as C3VerticalsSlugRouteImport } from './routes/c3.verticals_.$slug'
+import { Route as C3NewsSlugRouteImport } from './routes/c3.news_.$slug'
+import { Route as C3EventsSlugRouteImport } from './routes/c3.events_.$slug'
+import { Route as C2NewsSlugRouteImport } from './routes/c2.news_.$slug'
+import { Route as C2EventsSlugRouteImport } from './routes/c2.events_.$slug'
+import { Route as C1NewsSlugRouteImport } from './routes/c1.news_.$slug'
+import { Route as C1EventsSlugRouteImport } from './routes/c1.events_.$slug'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const C1Route = C1RouteImport.update({
-  id: '/c1',
-  path: '/c1',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const C2Route = C2RouteImport.update({
-  id: '/c2',
-  path: '/c2',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const C3Route = C3RouteImport.update({
-  id: '/c3',
-  path: '/c3',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const C4Route = C4RouteImport.update({
@@ -94,219 +79,49 @@ const C4Route = C4RouteImport.update({
   path: '/c4',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
+const C3Route = C3RouteImport.update({
+  id: '/c3',
+  path: '/c3',
   getParentRoute: () => rootRouteImport,
 } as any)
-const C1IndexRoute = C1IndexRouteImport.update({
+const C2Route = C2RouteImport.update({
+  id: '/c2',
+  path: '/c2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const C1Route = C1RouteImport.update({
+  id: '/c1',
+  path: '/c1',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => C1Route,
-} as any)
-const C1AboutRoute = C1AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => C1Route,
-} as any)
-const C1ContactRoute = C1ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => C1Route,
-} as any)
-const C1EventsRoute = C1EventsRouteImport.update({
-  id: '/events',
-  path: '/events',
-  getParentRoute: () => C1Route,
-} as any)
-const C1JourneyRoute = C1JourneyRouteImport.update({
-  id: '/journey',
-  path: '/journey',
-  getParentRoute: () => C1Route,
-} as any)
-const C1NetworkRoute = C1NetworkRouteImport.update({
-  id: '/network',
-  path: '/network',
-  getParentRoute: () => C1Route,
-} as any)
-const C1NewsRoute = C1NewsRouteImport.update({
-  id: '/news',
-  path: '/news',
-  getParentRoute: () => C1Route,
-} as any)
-const C1OfficesRoute = C1OfficesRouteImport.update({
-  id: '/offices',
-  path: '/offices',
-  getParentRoute: () => C1Route,
-} as any)
-const C1TeamRoute = C1TeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => C1Route,
-} as any)
-const C1VerticalsRoute = C1VerticalsRouteImport.update({
-  id: '/verticals',
-  path: '/verticals',
-  getParentRoute: () => C1Route,
-} as any)
-const C1WarehousesRoute = C1WarehousesRouteImport.update({
-  id: '/warehouses',
-  path: '/warehouses',
-  getParentRoute: () => C1Route,
-} as any)
-const C2IndexRoute = C2IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => C2Route,
-} as any)
-const C2AboutRoute = C2AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => C2Route,
-} as any)
-const C2ContactRoute = C2ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => C2Route,
-} as any)
-const C2EventsRoute = C2EventsRouteImport.update({
-  id: '/events',
-  path: '/events',
-  getParentRoute: () => C2Route,
-} as any)
-const C2JourneyRoute = C2JourneyRouteImport.update({
-  id: '/journey',
-  path: '/journey',
-  getParentRoute: () => C2Route,
-} as any)
-const C2NetworkRoute = C2NetworkRouteImport.update({
-  id: '/network',
-  path: '/network',
-  getParentRoute: () => C2Route,
-} as any)
-const C2NewsRoute = C2NewsRouteImport.update({
-  id: '/news',
-  path: '/news',
-  getParentRoute: () => C2Route,
-} as any)
-const C2OfficesRoute = C2OfficesRouteImport.update({
-  id: '/offices',
-  path: '/offices',
-  getParentRoute: () => C2Route,
-} as any)
-const C2TeamRoute = C2TeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => C2Route,
-} as any)
-const C2VerticalsRoute = C2VerticalsRouteImport.update({
-  id: '/verticals',
-  path: '/verticals',
-  getParentRoute: () => C2Route,
-} as any)
-const C2WarehousesRoute = C2WarehousesRouteImport.update({
-  id: '/warehouses',
-  path: '/warehouses',
-  getParentRoute: () => C2Route,
-} as any)
-const C3IndexRoute = C3IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => C3Route,
-} as any)
-const C3AboutRoute = C3AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => C3Route,
-} as any)
-const C3ContactRoute = C3ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => C3Route,
-} as any)
-const C3EventsRoute = C3EventsRouteImport.update({
-  id: '/events',
-  path: '/events',
-  getParentRoute: () => C3Route,
-} as any)
-const C3JourneyRoute = C3JourneyRouteImport.update({
-  id: '/journey',
-  path: '/journey',
-  getParentRoute: () => C3Route,
-} as any)
-const C3NetworkRoute = C3NetworkRouteImport.update({
-  id: '/network',
-  path: '/network',
-  getParentRoute: () => C3Route,
-} as any)
-const C3NewsRoute = C3NewsRouteImport.update({
-  id: '/news',
-  path: '/news',
-  getParentRoute: () => C3Route,
-} as any)
-const C3OfficesRoute = C3OfficesRouteImport.update({
-  id: '/offices',
-  path: '/offices',
-  getParentRoute: () => C3Route,
-} as any)
-const C3TeamRoute = C3TeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => C3Route,
-} as any)
-const C3VerticalsRoute = C3VerticalsRouteImport.update({
-  id: '/verticals',
-  path: '/verticals',
-  getParentRoute: () => C3Route,
-} as any)
-const C3WarehousesRoute = C3WarehousesRouteImport.update({
-  id: '/warehouses',
-  path: '/warehouses',
-  getParentRoute: () => C3Route,
+  getParentRoute: () => rootRouteImport,
 } as any)
 const C4IndexRoute = C4IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => C4Route,
 } as any)
-const C4AboutRoute = C4AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => C4Route,
+const C3IndexRoute = C3IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => C3Route,
 } as any)
-const C4ContactRoute = C4ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => C4Route,
+const C2IndexRoute = C2IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => C2Route,
 } as any)
-const C4EventsRoute = C4EventsRouteImport.update({
-  id: '/events',
-  path: '/events',
-  getParentRoute: () => C4Route,
+const C1IndexRoute = C1IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => C1Route,
 } as any)
-const C4JourneyRoute = C4JourneyRouteImport.update({
-  id: '/journey',
-  path: '/journey',
-  getParentRoute: () => C4Route,
-} as any)
-const C4NetworkRoute = C4NetworkRouteImport.update({
-  id: '/network',
-  path: '/network',
-  getParentRoute: () => C4Route,
-} as any)
-const C4NewsRoute = C4NewsRouteImport.update({
-  id: '/news',
-  path: '/news',
-  getParentRoute: () => C4Route,
-} as any)
-const C4OfficesRoute = C4OfficesRouteImport.update({
-  id: '/offices',
-  path: '/offices',
-  getParentRoute: () => C4Route,
-} as any)
-const C4TeamRoute = C4TeamRouteImport.update({
-  id: '/team',
-  path: '/team',
+const C4WarehousesRoute = C4WarehousesRouteImport.update({
+  id: '/warehouses',
+  path: '/warehouses',
   getParentRoute: () => C4Route,
 } as any)
 const C4VerticalsRoute = C4VerticalsRouteImport.update({
@@ -314,34 +129,209 @@ const C4VerticalsRoute = C4VerticalsRouteImport.update({
   path: '/verticals',
   getParentRoute: () => C4Route,
 } as any)
-const C4WarehousesRoute = C4WarehousesRouteImport.update({
-  id: '/warehouses',
-  path: '/warehouses',
+const C4TeamRoute = C4TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
   getParentRoute: () => C4Route,
 } as any)
-const C1EventsSlugRoute = C1EventsSlugRouteImport.update({
-  id: '/events_/$slug',
-  path: '/events/$slug',
-  getParentRoute: () => C1Route,
+const C4OfficesRoute = C4OfficesRouteImport.update({
+  id: '/offices',
+  path: '/offices',
+  getParentRoute: () => C4Route,
 } as any)
-const C1NewsSlugRoute = C1NewsSlugRouteImport.update({
-  id: '/news_/$slug',
-  path: '/news/$slug',
-  getParentRoute: () => C1Route,
+const C4NewsRoute = C4NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
+  getParentRoute: () => C4Route,
 } as any)
-const C2EventsSlugRoute = C2EventsSlugRouteImport.update({
-  id: '/events_/$slug',
-  path: '/events/$slug',
+const C4NetworkRoute = C4NetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => C4Route,
+} as any)
+const C4JourneyRoute = C4JourneyRouteImport.update({
+  id: '/journey',
+  path: '/journey',
+  getParentRoute: () => C4Route,
+} as any)
+const C4EventsRoute = C4EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => C4Route,
+} as any)
+const C4ContactRoute = C4ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => C4Route,
+} as any)
+const C4AboutRoute = C4AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => C4Route,
+} as any)
+const C3WarehousesRoute = C3WarehousesRouteImport.update({
+  id: '/warehouses',
+  path: '/warehouses',
+  getParentRoute: () => C3Route,
+} as any)
+const C3VerticalsRoute = C3VerticalsRouteImport.update({
+  id: '/verticals',
+  path: '/verticals',
+  getParentRoute: () => C3Route,
+} as any)
+const C3TeamRoute = C3TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => C3Route,
+} as any)
+const C3OfficesRoute = C3OfficesRouteImport.update({
+  id: '/offices',
+  path: '/offices',
+  getParentRoute: () => C3Route,
+} as any)
+const C3NewsRoute = C3NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
+  getParentRoute: () => C3Route,
+} as any)
+const C3NetworkRoute = C3NetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => C3Route,
+} as any)
+const C3JourneyRoute = C3JourneyRouteImport.update({
+  id: '/journey',
+  path: '/journey',
+  getParentRoute: () => C3Route,
+} as any)
+const C3EventsRoute = C3EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => C3Route,
+} as any)
+const C3ContactRoute = C3ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => C3Route,
+} as any)
+const C3AboutRoute = C3AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => C3Route,
+} as any)
+const C2WarehousesRoute = C2WarehousesRouteImport.update({
+  id: '/warehouses',
+  path: '/warehouses',
   getParentRoute: () => C2Route,
 } as any)
-const C2NewsSlugRoute = C2NewsSlugRouteImport.update({
-  id: '/news_/$slug',
-  path: '/news/$slug',
+const C2VerticalsRoute = C2VerticalsRouteImport.update({
+  id: '/verticals',
+  path: '/verticals',
   getParentRoute: () => C2Route,
 } as any)
-const C3EventsSlugRoute = C3EventsSlugRouteImport.update({
+const C2TeamRoute = C2TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => C2Route,
+} as any)
+const C2OfficesRoute = C2OfficesRouteImport.update({
+  id: '/offices',
+  path: '/offices',
+  getParentRoute: () => C2Route,
+} as any)
+const C2NewsRoute = C2NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
+  getParentRoute: () => C2Route,
+} as any)
+const C2NetworkRoute = C2NetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => C2Route,
+} as any)
+const C2JourneyRoute = C2JourneyRouteImport.update({
+  id: '/journey',
+  path: '/journey',
+  getParentRoute: () => C2Route,
+} as any)
+const C2EventsRoute = C2EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => C2Route,
+} as any)
+const C2ContactRoute = C2ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => C2Route,
+} as any)
+const C2AboutRoute = C2AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => C2Route,
+} as any)
+const C1WarehousesRoute = C1WarehousesRouteImport.update({
+  id: '/warehouses',
+  path: '/warehouses',
+  getParentRoute: () => C1Route,
+} as any)
+const C1VerticalsRoute = C1VerticalsRouteImport.update({
+  id: '/verticals',
+  path: '/verticals',
+  getParentRoute: () => C1Route,
+} as any)
+const C1TeamRoute = C1TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => C1Route,
+} as any)
+const C1OfficesRoute = C1OfficesRouteImport.update({
+  id: '/offices',
+  path: '/offices',
+  getParentRoute: () => C1Route,
+} as any)
+const C1NewsRoute = C1NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
+  getParentRoute: () => C1Route,
+} as any)
+const C1NetworkRoute = C1NetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => C1Route,
+} as any)
+const C1JourneyRoute = C1JourneyRouteImport.update({
+  id: '/journey',
+  path: '/journey',
+  getParentRoute: () => C1Route,
+} as any)
+const C1EventsRoute = C1EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => C1Route,
+} as any)
+const C1ContactRoute = C1ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => C1Route,
+} as any)
+const C1AboutRoute = C1AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => C1Route,
+} as any)
+const C4NewsSlugRoute = C4NewsSlugRouteImport.update({
+  id: '/news_/$slug',
+  path: '/news/$slug',
+  getParentRoute: () => C4Route,
+} as any)
+const C4EventsSlugRoute = C4EventsSlugRouteImport.update({
   id: '/events_/$slug',
   path: '/events/$slug',
+  getParentRoute: () => C4Route,
+} as any)
+const C3VerticalsSlugRoute = C3VerticalsSlugRouteImport.update({
+  id: '/verticals_/$slug',
+  path: '/verticals/$slug',
   getParentRoute: () => C3Route,
 } as any)
 const C3NewsSlugRoute = C3NewsSlugRouteImport.update({
@@ -349,20 +339,30 @@ const C3NewsSlugRoute = C3NewsSlugRouteImport.update({
   path: '/news/$slug',
   getParentRoute: () => C3Route,
 } as any)
-const C3VerticalsSlugRoute = C3VerticalsSlugRouteImport.update({
-  id: '/verticals_/$slug',
-  path: '/verticals/$slug',
-  getParentRoute: () => C3Route,
-} as any)
-const C4EventsSlugRoute = C4EventsSlugRouteImport.update({
+const C3EventsSlugRoute = C3EventsSlugRouteImport.update({
   id: '/events_/$slug',
   path: '/events/$slug',
-  getParentRoute: () => C4Route,
+  getParentRoute: () => C3Route,
 } as any)
-const C4NewsSlugRoute = C4NewsSlugRouteImport.update({
+const C2NewsSlugRoute = C2NewsSlugRouteImport.update({
   id: '/news_/$slug',
   path: '/news/$slug',
-  getParentRoute: () => C4Route,
+  getParentRoute: () => C2Route,
+} as any)
+const C2EventsSlugRoute = C2EventsSlugRouteImport.update({
+  id: '/events_/$slug',
+  path: '/events/$slug',
+  getParentRoute: () => C2Route,
+} as any)
+const C1NewsSlugRoute = C1NewsSlugRouteImport.update({
+  id: '/news_/$slug',
+  path: '/news/$slug',
+  getParentRoute: () => C1Route,
+} as any)
+const C1EventsSlugRoute = C1EventsSlugRouteImport.update({
+  id: '/events_/$slug',
+  path: '/events/$slug',
+  getParentRoute: () => C1Route,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -738,32 +738,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/c1': {
-      id: '/c1'
-      path: '/c1'
-      fullPath: '/c1'
-      preLoaderRoute: typeof C1RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/c2': {
-      id: '/c2'
-      path: '/c2'
-      fullPath: '/c2'
-      preLoaderRoute: typeof C2RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/c3': {
-      id: '/c3'
-      path: '/c3'
-      fullPath: '/c3'
-      preLoaderRoute: typeof C3RouteImport
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/c4': {
@@ -773,243 +752,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof C4RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
+    '/c3': {
+      id: '/c3'
+      path: '/c3'
+      fullPath: '/c3'
+      preLoaderRoute: typeof C3RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/c1/': {
-      id: '/c1/'
+    '/c2': {
+      id: '/c2'
+      path: '/c2'
+      fullPath: '/c2'
+      preLoaderRoute: typeof C2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/c1': {
+      id: '/c1'
+      path: '/c1'
+      fullPath: '/c1'
+      preLoaderRoute: typeof C1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
       path: '/'
-      fullPath: '/c1/'
-      preLoaderRoute: typeof C1IndexRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/about': {
-      id: '/c1/about'
-      path: '/about'
-      fullPath: '/c1/about'
-      preLoaderRoute: typeof C1AboutRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/contact': {
-      id: '/c1/contact'
-      path: '/contact'
-      fullPath: '/c1/contact'
-      preLoaderRoute: typeof C1ContactRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/events': {
-      id: '/c1/events'
-      path: '/events'
-      fullPath: '/c1/events'
-      preLoaderRoute: typeof C1EventsRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/journey': {
-      id: '/c1/journey'
-      path: '/journey'
-      fullPath: '/c1/journey'
-      preLoaderRoute: typeof C1JourneyRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/network': {
-      id: '/c1/network'
-      path: '/network'
-      fullPath: '/c1/network'
-      preLoaderRoute: typeof C1NetworkRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/news': {
-      id: '/c1/news'
-      path: '/news'
-      fullPath: '/c1/news'
-      preLoaderRoute: typeof C1NewsRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/offices': {
-      id: '/c1/offices'
-      path: '/offices'
-      fullPath: '/c1/offices'
-      preLoaderRoute: typeof C1OfficesRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/team': {
-      id: '/c1/team'
-      path: '/team'
-      fullPath: '/c1/team'
-      preLoaderRoute: typeof C1TeamRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/verticals': {
-      id: '/c1/verticals'
-      path: '/verticals'
-      fullPath: '/c1/verticals'
-      preLoaderRoute: typeof C1VerticalsRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c1/warehouses': {
-      id: '/c1/warehouses'
-      path: '/warehouses'
-      fullPath: '/c1/warehouses'
-      preLoaderRoute: typeof C1WarehousesRouteImport
-      parentRoute: typeof C1Route
-    }
-    '/c2/': {
-      id: '/c2/'
-      path: '/'
-      fullPath: '/c2/'
-      preLoaderRoute: typeof C2IndexRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/about': {
-      id: '/c2/about'
-      path: '/about'
-      fullPath: '/c2/about'
-      preLoaderRoute: typeof C2AboutRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/contact': {
-      id: '/c2/contact'
-      path: '/contact'
-      fullPath: '/c2/contact'
-      preLoaderRoute: typeof C2ContactRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/events': {
-      id: '/c2/events'
-      path: '/events'
-      fullPath: '/c2/events'
-      preLoaderRoute: typeof C2EventsRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/journey': {
-      id: '/c2/journey'
-      path: '/journey'
-      fullPath: '/c2/journey'
-      preLoaderRoute: typeof C2JourneyRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/network': {
-      id: '/c2/network'
-      path: '/network'
-      fullPath: '/c2/network'
-      preLoaderRoute: typeof C2NetworkRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/news': {
-      id: '/c2/news'
-      path: '/news'
-      fullPath: '/c2/news'
-      preLoaderRoute: typeof C2NewsRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/offices': {
-      id: '/c2/offices'
-      path: '/offices'
-      fullPath: '/c2/offices'
-      preLoaderRoute: typeof C2OfficesRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/team': {
-      id: '/c2/team'
-      path: '/team'
-      fullPath: '/c2/team'
-      preLoaderRoute: typeof C2TeamRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/verticals': {
-      id: '/c2/verticals'
-      path: '/verticals'
-      fullPath: '/c2/verticals'
-      preLoaderRoute: typeof C2VerticalsRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c2/warehouses': {
-      id: '/c2/warehouses'
-      path: '/warehouses'
-      fullPath: '/c2/warehouses'
-      preLoaderRoute: typeof C2WarehousesRouteImport
-      parentRoute: typeof C2Route
-    }
-    '/c3/': {
-      id: '/c3/'
-      path: '/'
-      fullPath: '/c3/'
-      preLoaderRoute: typeof C3IndexRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/about': {
-      id: '/c3/about'
-      path: '/about'
-      fullPath: '/c3/about'
-      preLoaderRoute: typeof C3AboutRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/contact': {
-      id: '/c3/contact'
-      path: '/contact'
-      fullPath: '/c3/contact'
-      preLoaderRoute: typeof C3ContactRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/events': {
-      id: '/c3/events'
-      path: '/events'
-      fullPath: '/c3/events'
-      preLoaderRoute: typeof C3EventsRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/journey': {
-      id: '/c3/journey'
-      path: '/journey'
-      fullPath: '/c3/journey'
-      preLoaderRoute: typeof C3JourneyRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/network': {
-      id: '/c3/network'
-      path: '/network'
-      fullPath: '/c3/network'
-      preLoaderRoute: typeof C3NetworkRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/news': {
-      id: '/c3/news'
-      path: '/news'
-      fullPath: '/c3/news'
-      preLoaderRoute: typeof C3NewsRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/offices': {
-      id: '/c3/offices'
-      path: '/offices'
-      fullPath: '/c3/offices'
-      preLoaderRoute: typeof C3OfficesRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/team': {
-      id: '/c3/team'
-      path: '/team'
-      fullPath: '/c3/team'
-      preLoaderRoute: typeof C3TeamRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/verticals': {
-      id: '/c3/verticals'
-      path: '/verticals'
-      fullPath: '/c3/verticals'
-      preLoaderRoute: typeof C3VerticalsRouteImport
-      parentRoute: typeof C3Route
-    }
-    '/c3/warehouses': {
-      id: '/c3/warehouses'
-      path: '/warehouses'
-      fullPath: '/c3/warehouses'
-      preLoaderRoute: typeof C3WarehousesRouteImport
-      parentRoute: typeof C3Route
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/c4/': {
       id: '/c4/'
@@ -1018,60 +787,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof C4IndexRouteImport
       parentRoute: typeof C4Route
     }
-    '/c4/about': {
-      id: '/c4/about'
-      path: '/about'
-      fullPath: '/c4/about'
-      preLoaderRoute: typeof C4AboutRouteImport
-      parentRoute: typeof C4Route
+    '/c3/': {
+      id: '/c3/'
+      path: '/'
+      fullPath: '/c3/'
+      preLoaderRoute: typeof C3IndexRouteImport
+      parentRoute: typeof C3Route
     }
-    '/c4/contact': {
-      id: '/c4/contact'
-      path: '/contact'
-      fullPath: '/c4/contact'
-      preLoaderRoute: typeof C4ContactRouteImport
-      parentRoute: typeof C4Route
+    '/c2/': {
+      id: '/c2/'
+      path: '/'
+      fullPath: '/c2/'
+      preLoaderRoute: typeof C2IndexRouteImport
+      parentRoute: typeof C2Route
     }
-    '/c4/events': {
-      id: '/c4/events'
-      path: '/events'
-      fullPath: '/c4/events'
-      preLoaderRoute: typeof C4EventsRouteImport
-      parentRoute: typeof C4Route
+    '/c1/': {
+      id: '/c1/'
+      path: '/'
+      fullPath: '/c1/'
+      preLoaderRoute: typeof C1IndexRouteImport
+      parentRoute: typeof C1Route
     }
-    '/c4/journey': {
-      id: '/c4/journey'
-      path: '/journey'
-      fullPath: '/c4/journey'
-      preLoaderRoute: typeof C4JourneyRouteImport
-      parentRoute: typeof C4Route
-    }
-    '/c4/network': {
-      id: '/c4/network'
-      path: '/network'
-      fullPath: '/c4/network'
-      preLoaderRoute: typeof C4NetworkRouteImport
-      parentRoute: typeof C4Route
-    }
-    '/c4/news': {
-      id: '/c4/news'
-      path: '/news'
-      fullPath: '/c4/news'
-      preLoaderRoute: typeof C4NewsRouteImport
-      parentRoute: typeof C4Route
-    }
-    '/c4/offices': {
-      id: '/c4/offices'
-      path: '/offices'
-      fullPath: '/c4/offices'
-      preLoaderRoute: typeof C4OfficesRouteImport
-      parentRoute: typeof C4Route
-    }
-    '/c4/team': {
-      id: '/c4/team'
-      path: '/team'
-      fullPath: '/c4/team'
-      preLoaderRoute: typeof C4TeamRouteImport
+    '/c4/warehouses': {
+      id: '/c4/warehouses'
+      path: '/warehouses'
+      fullPath: '/c4/warehouses'
+      preLoaderRoute: typeof C4WarehousesRouteImport
       parentRoute: typeof C4Route
     }
     '/c4/verticals': {
@@ -1081,46 +822,291 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof C4VerticalsRouteImport
       parentRoute: typeof C4Route
     }
-    '/c4/warehouses': {
-      id: '/c4/warehouses'
-      path: '/warehouses'
-      fullPath: '/c4/warehouses'
-      preLoaderRoute: typeof C4WarehousesRouteImport
+    '/c4/team': {
+      id: '/c4/team'
+      path: '/team'
+      fullPath: '/c4/team'
+      preLoaderRoute: typeof C4TeamRouteImport
       parentRoute: typeof C4Route
     }
-    '/c1/events_/$slug': {
-      id: '/c1/events_/$slug'
-      path: '/events/$slug'
-      fullPath: '/c1/events/$slug'
-      preLoaderRoute: typeof C1EventsSlugRouteImport
-      parentRoute: typeof C1Route
+    '/c4/offices': {
+      id: '/c4/offices'
+      path: '/offices'
+      fullPath: '/c4/offices'
+      preLoaderRoute: typeof C4OfficesRouteImport
+      parentRoute: typeof C4Route
     }
-    '/c1/news_/$slug': {
-      id: '/c1/news_/$slug'
-      path: '/news/$slug'
-      fullPath: '/c1/news/$slug'
-      preLoaderRoute: typeof C1NewsSlugRouteImport
-      parentRoute: typeof C1Route
+    '/c4/news': {
+      id: '/c4/news'
+      path: '/news'
+      fullPath: '/c4/news'
+      preLoaderRoute: typeof C4NewsRouteImport
+      parentRoute: typeof C4Route
     }
-    '/c2/events_/$slug': {
-      id: '/c2/events_/$slug'
-      path: '/events/$slug'
-      fullPath: '/c2/events/$slug'
-      preLoaderRoute: typeof C2EventsSlugRouteImport
+    '/c4/network': {
+      id: '/c4/network'
+      path: '/network'
+      fullPath: '/c4/network'
+      preLoaderRoute: typeof C4NetworkRouteImport
+      parentRoute: typeof C4Route
+    }
+    '/c4/journey': {
+      id: '/c4/journey'
+      path: '/journey'
+      fullPath: '/c4/journey'
+      preLoaderRoute: typeof C4JourneyRouteImport
+      parentRoute: typeof C4Route
+    }
+    '/c4/events': {
+      id: '/c4/events'
+      path: '/events'
+      fullPath: '/c4/events'
+      preLoaderRoute: typeof C4EventsRouteImport
+      parentRoute: typeof C4Route
+    }
+    '/c4/contact': {
+      id: '/c4/contact'
+      path: '/contact'
+      fullPath: '/c4/contact'
+      preLoaderRoute: typeof C4ContactRouteImport
+      parentRoute: typeof C4Route
+    }
+    '/c4/about': {
+      id: '/c4/about'
+      path: '/about'
+      fullPath: '/c4/about'
+      preLoaderRoute: typeof C4AboutRouteImport
+      parentRoute: typeof C4Route
+    }
+    '/c3/warehouses': {
+      id: '/c3/warehouses'
+      path: '/warehouses'
+      fullPath: '/c3/warehouses'
+      preLoaderRoute: typeof C3WarehousesRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c3/verticals': {
+      id: '/c3/verticals'
+      path: '/verticals'
+      fullPath: '/c3/verticals'
+      preLoaderRoute: typeof C3VerticalsRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c3/team': {
+      id: '/c3/team'
+      path: '/team'
+      fullPath: '/c3/team'
+      preLoaderRoute: typeof C3TeamRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c3/offices': {
+      id: '/c3/offices'
+      path: '/offices'
+      fullPath: '/c3/offices'
+      preLoaderRoute: typeof C3OfficesRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c3/news': {
+      id: '/c3/news'
+      path: '/news'
+      fullPath: '/c3/news'
+      preLoaderRoute: typeof C3NewsRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c3/network': {
+      id: '/c3/network'
+      path: '/network'
+      fullPath: '/c3/network'
+      preLoaderRoute: typeof C3NetworkRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c3/journey': {
+      id: '/c3/journey'
+      path: '/journey'
+      fullPath: '/c3/journey'
+      preLoaderRoute: typeof C3JourneyRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c3/events': {
+      id: '/c3/events'
+      path: '/events'
+      fullPath: '/c3/events'
+      preLoaderRoute: typeof C3EventsRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c3/contact': {
+      id: '/c3/contact'
+      path: '/contact'
+      fullPath: '/c3/contact'
+      preLoaderRoute: typeof C3ContactRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c3/about': {
+      id: '/c3/about'
+      path: '/about'
+      fullPath: '/c3/about'
+      preLoaderRoute: typeof C3AboutRouteImport
+      parentRoute: typeof C3Route
+    }
+    '/c2/warehouses': {
+      id: '/c2/warehouses'
+      path: '/warehouses'
+      fullPath: '/c2/warehouses'
+      preLoaderRoute: typeof C2WarehousesRouteImport
       parentRoute: typeof C2Route
     }
-    '/c2/news_/$slug': {
-      id: '/c2/news_/$slug'
-      path: '/news/$slug'
-      fullPath: '/c2/news/$slug'
-      preLoaderRoute: typeof C2NewsSlugRouteImport
+    '/c2/verticals': {
+      id: '/c2/verticals'
+      path: '/verticals'
+      fullPath: '/c2/verticals'
+      preLoaderRoute: typeof C2VerticalsRouteImport
       parentRoute: typeof C2Route
     }
-    '/c3/events_/$slug': {
-      id: '/c3/events_/$slug'
+    '/c2/team': {
+      id: '/c2/team'
+      path: '/team'
+      fullPath: '/c2/team'
+      preLoaderRoute: typeof C2TeamRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c2/offices': {
+      id: '/c2/offices'
+      path: '/offices'
+      fullPath: '/c2/offices'
+      preLoaderRoute: typeof C2OfficesRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c2/news': {
+      id: '/c2/news'
+      path: '/news'
+      fullPath: '/c2/news'
+      preLoaderRoute: typeof C2NewsRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c2/network': {
+      id: '/c2/network'
+      path: '/network'
+      fullPath: '/c2/network'
+      preLoaderRoute: typeof C2NetworkRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c2/journey': {
+      id: '/c2/journey'
+      path: '/journey'
+      fullPath: '/c2/journey'
+      preLoaderRoute: typeof C2JourneyRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c2/events': {
+      id: '/c2/events'
+      path: '/events'
+      fullPath: '/c2/events'
+      preLoaderRoute: typeof C2EventsRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c2/contact': {
+      id: '/c2/contact'
+      path: '/contact'
+      fullPath: '/c2/contact'
+      preLoaderRoute: typeof C2ContactRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c2/about': {
+      id: '/c2/about'
+      path: '/about'
+      fullPath: '/c2/about'
+      preLoaderRoute: typeof C2AboutRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c1/warehouses': {
+      id: '/c1/warehouses'
+      path: '/warehouses'
+      fullPath: '/c1/warehouses'
+      preLoaderRoute: typeof C1WarehousesRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/verticals': {
+      id: '/c1/verticals'
+      path: '/verticals'
+      fullPath: '/c1/verticals'
+      preLoaderRoute: typeof C1VerticalsRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/team': {
+      id: '/c1/team'
+      path: '/team'
+      fullPath: '/c1/team'
+      preLoaderRoute: typeof C1TeamRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/offices': {
+      id: '/c1/offices'
+      path: '/offices'
+      fullPath: '/c1/offices'
+      preLoaderRoute: typeof C1OfficesRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/news': {
+      id: '/c1/news'
+      path: '/news'
+      fullPath: '/c1/news'
+      preLoaderRoute: typeof C1NewsRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/network': {
+      id: '/c1/network'
+      path: '/network'
+      fullPath: '/c1/network'
+      preLoaderRoute: typeof C1NetworkRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/journey': {
+      id: '/c1/journey'
+      path: '/journey'
+      fullPath: '/c1/journey'
+      preLoaderRoute: typeof C1JourneyRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/events': {
+      id: '/c1/events'
+      path: '/events'
+      fullPath: '/c1/events'
+      preLoaderRoute: typeof C1EventsRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/contact': {
+      id: '/c1/contact'
+      path: '/contact'
+      fullPath: '/c1/contact'
+      preLoaderRoute: typeof C1ContactRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/about': {
+      id: '/c1/about'
+      path: '/about'
+      fullPath: '/c1/about'
+      preLoaderRoute: typeof C1AboutRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c4/news_/$slug': {
+      id: '/c4/news_/$slug'
+      path: '/news/$slug'
+      fullPath: '/c4/news/$slug'
+      preLoaderRoute: typeof C4NewsSlugRouteImport
+      parentRoute: typeof C4Route
+    }
+    '/c4/events_/$slug': {
+      id: '/c4/events_/$slug'
       path: '/events/$slug'
-      fullPath: '/c3/events/$slug'
-      preLoaderRoute: typeof C3EventsSlugRouteImport
+      fullPath: '/c4/events/$slug'
+      preLoaderRoute: typeof C4EventsSlugRouteImport
+      parentRoute: typeof C4Route
+    }
+    '/c3/verticals_/$slug': {
+      id: '/c3/verticals_/$slug'
+      path: '/verticals/$slug'
+      fullPath: '/c3/verticals/$slug'
+      preLoaderRoute: typeof C3VerticalsSlugRouteImport
       parentRoute: typeof C3Route
     }
     '/c3/news_/$slug': {
@@ -1130,26 +1116,40 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof C3NewsSlugRouteImport
       parentRoute: typeof C3Route
     }
-    '/c3/verticals_/$slug': {
-      id: '/c3/verticals_/$slug'
-      path: '/verticals/$slug'
-      fullPath: '/c3/verticals/$slug'
-      preLoaderRoute: typeof C3VerticalsSlugRouteImport
+    '/c3/events_/$slug': {
+      id: '/c3/events_/$slug'
+      path: '/events/$slug'
+      fullPath: '/c3/events/$slug'
+      preLoaderRoute: typeof C3EventsSlugRouteImport
       parentRoute: typeof C3Route
     }
-    '/c4/events_/$slug': {
-      id: '/c4/events_/$slug'
-      path: '/events/$slug'
-      fullPath: '/c4/events/$slug'
-      preLoaderRoute: typeof C4EventsSlugRouteImport
-      parentRoute: typeof C4Route
-    }
-    '/c4/news_/$slug': {
-      id: '/c4/news_/$slug'
+    '/c2/news_/$slug': {
+      id: '/c2/news_/$slug'
       path: '/news/$slug'
-      fullPath: '/c4/news/$slug'
-      preLoaderRoute: typeof C4NewsSlugRouteImport
-      parentRoute: typeof C4Route
+      fullPath: '/c2/news/$slug'
+      preLoaderRoute: typeof C2NewsSlugRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c2/events_/$slug': {
+      id: '/c2/events_/$slug'
+      path: '/events/$slug'
+      fullPath: '/c2/events/$slug'
+      preLoaderRoute: typeof C2EventsSlugRouteImport
+      parentRoute: typeof C2Route
+    }
+    '/c1/news_/$slug': {
+      id: '/c1/news_/$slug'
+      path: '/news/$slug'
+      fullPath: '/c1/news/$slug'
+      preLoaderRoute: typeof C1NewsSlugRouteImport
+      parentRoute: typeof C1Route
+    }
+    '/c1/events_/$slug': {
+      id: '/c1/events_/$slug'
+      path: '/events/$slug'
+      fullPath: '/c1/events/$slug'
+      preLoaderRoute: typeof C1EventsSlugRouteImport
+      parentRoute: typeof C1Route
     }
   }
 }
@@ -1303,3 +1303,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

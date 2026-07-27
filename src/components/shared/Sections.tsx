@@ -103,7 +103,7 @@ export function VerticalsSection({ base }: { base?: string }) {
         {VERTICALS.map((v, i) => (
           <Reveal key={v.title} delay={i * 60}>
             {base ? (
-              <Link to={`${base}/verticals/$slug`} params={{ slug: v.slug }} className="group block h-full rounded-2xl p-6 border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:border-[color:var(--c-accent)]/50">
+              <Link to={`${base}/verticals_/$slug`} params={{ slug: v.slug }} className="group block h-full rounded-2xl p-6 border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:border-[color:var(--c-accent)]/50">
                 <div className="flex items-center justify-between">
                   <div className="text-xs uppercase tracking-widest text-[color:var(--c-accent)] font-semibold">
                     Business Vertical
@@ -285,7 +285,7 @@ export function ContactSection() {
 
 export function NewsCard({ n, base }: { n: NewsArticle; base: string }) {
   return (
-    <Link to={`${base}/news/$slug`} params={{ slug: n.slug }} className="group block rounded-2xl overflow-hidden border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform duration-300">
+    <Link to={`${base}/news_/$slug`} params={{ slug: n.slug }} className="group block rounded-2xl overflow-hidden border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform duration-300">
       <div className="aspect-[16/10] overflow-hidden bg-black/5">
         <img src={n.image} alt={n.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
       </div>
@@ -356,7 +356,7 @@ export function NewsIndexSection({ base }: { base: string }) {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12">
       {/* Featured */}
       <Reveal>
-        <Link to={`${base}/news/$slug`} params={{ slug: featured.slug }} className="group grid md:grid-cols-2 gap-6 rounded-3xl overflow-hidden border border-[color:var(--c-border)] bg-[color:var(--c-surface)]">
+        <Link to={`${base}/news_/$slug`} params={{ slug: featured.slug }} className="group grid md:grid-cols-2 gap-6 rounded-3xl overflow-hidden border border-[color:var(--c-border)] bg-[color:var(--c-surface)]">
           <div className="aspect-[16/10] md:aspect-auto overflow-hidden">
             <img src={featured.image} alt={featured.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
@@ -477,13 +477,13 @@ export function NewsDetailSection({ base, article }: { base: string; article: Ne
       </div>
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pb-16 grid md:grid-cols-2 gap-4">
         {prev ? (
-          <Link to={`${base}/news/$slug`} params={{ slug: prev.slug }} className="rounded-2xl p-5 border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform">
+          <Link to={`${base}/news_/$slug`} params={{ slug: prev.slug }} className="rounded-2xl p-5 border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform">
             <div className="text-xs uppercase tracking-widest opacity-60 inline-flex items-center gap-1.5"><ChevronLeft className="h-3 w-3" /> Previous</div>
             <div className="mt-1 font-display font-semibold">{prev.title}</div>
           </Link>
         ) : <div />}
         {next ? (
-          <Link to={`${base}/news/$slug`} params={{ slug: next.slug }} className="rounded-2xl p-5 border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform text-right">
+          <Link to={`${base}/news_/$slug`} params={{ slug: next.slug }} className="rounded-2xl p-5 border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform text-right">
             <div className="text-xs uppercase tracking-widest opacity-60 inline-flex items-center gap-1.5 justify-end w-full">Next <ChevronRight className="h-3 w-3" /></div>
             <div className="mt-1 font-display font-semibold">{next.title}</div>
           </Link>
@@ -510,7 +510,7 @@ export function EventCard({ e, base }: { e: EventItem; base: string }) {
   const st = statusOf(e.date);
   const stColor = st === "upcoming" ? "bg-emerald-500" : st === "ongoing" ? "bg-amber-500" : "bg-slate-400";
   return (
-    <Link to={`${base}/events/$slug`} params={{ slug: e.slug }} className="group block rounded-2xl overflow-hidden border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform duration-300">
+    <Link to={`${base}/events_/$slug`} params={{ slug: e.slug }} className="group block rounded-2xl overflow-hidden border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform duration-300">
       <div className="aspect-[16/9] overflow-hidden bg-black/5 relative">
         <img src={e.image} alt={e.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
         <span className={`absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] uppercase tracking-widest text-white ${stColor}`}>
@@ -558,7 +558,7 @@ export function HomeEventsPreview({ base }: { base: string }) {
               </div>
               <p className="mt-4 opacity-75">{upcoming.description}</p>
               <div className="mt-6 flex gap-3">
-                <Link to={`${base}/events/$slug`} params={{ slug: upcoming.slug }} className="inline-flex items-center gap-2 rounded-full bg-[color:var(--c-accent)] text-white px-5 py-2.5 text-sm font-semibold">Event Details <ArrowRight className="h-4 w-4" /></Link>
+                <Link to={`${base}/events_/$slug`} params={{ slug: upcoming.slug }} className="inline-flex items-center gap-2 rounded-full bg-[color:var(--c-accent)] text-white px-5 py-2.5 text-sm font-semibold">Event Details <ArrowRight className="h-4 w-4" /></Link>
                 <Link to={`${base}/events`} className="inline-flex items-center gap-2 rounded-full border border-[color:var(--c-border)] px-5 py-2.5 text-sm font-semibold">View All Events</Link>
               </div>
             </div>
