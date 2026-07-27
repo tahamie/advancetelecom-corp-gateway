@@ -3,7 +3,7 @@ import { Link as TSLink } from "@tanstack/react-router";
 const Link = TSLink as unknown as React.FC<any>;
 import type React from "react";
 import { useMemo, useState } from "react";
-import { Search, Calendar, Clock, User, ArrowRight, ChevronLeft, ChevronRight, Share2, Copy, MapPin, Download, Users, CheckCircle2, Mail } from "lucide-react";
+import { Search, Calendar, Clock, User, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, Share2, Copy, MapPin, Download, Users, CheckCircle2, Mail } from "lucide-react";
 import { NEWS, NEWS_CATEGORIES, getAdjacent, type NewsArticle } from "@/data/news";
 import { EVENTS, EVENT_CATEGORIES, statusOf, type EventItem } from "@/data/events";
 import { ABOUT, JOURNEY, VERTICALS, WAREHOUSES, OFFICES, NETWORK_STATS, LEADERSHIP, CONTACT, STATS } from "@/data/content";
@@ -124,6 +124,117 @@ export function VerticalsSection({ base }: { base?: string }) {
             )}
           </Reveal>
         ))}
+      </div>
+    </div>
+  );
+}
+
+export function VerticalDetailSection({ base, vertical }: { base: string; vertical: typeof VERTICALS[0] }) {
+  return (
+    <div className="bg-[color:var(--c-bg)] min-h-screen pb-12">
+      {/* Hero Section */}
+      <div className="relative h-[80vh] min-h-[500px] w-full overflow-hidden rounded-b-[3rem] shadow-2xl z-10 border-b border-[color:var(--c-border)]">
+        {vertical.videoUrl ? (
+          <video 
+            src={vertical.videoUrl} 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover scale-105 transition-transform duration-[20s] ease-linear hover:scale-110"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--c-accent)] to-[#1e3a8a]" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
+        
+        {/* Top Nav inside Hero */}
+        <div className="absolute top-8 left-4 md:left-8 z-20 animate-fade-up">
+          <Link to={`${base}/verticals`} className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition-all shadow-lg hover:shadow-white/10">
+            <ArrowLeft className="h-4 w-4" /> Back to Verticals
+          </Link>
+        </div>
+        
+        {/* Hero Content */}
+        <div className="absolute bottom-16 left-4 md:left-12 lg:left-24 z-20 max-w-4xl pr-4">
+          <div className="animate-fade-up" style={{ animationDelay: '150ms' }}>
+            <span className="inline-block px-3 py-1 mb-5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-white border border-white/20 rounded-full bg-white/10 backdrop-blur-sm shadow-sm">
+              Business Vertical
+            </span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1] drop-shadow-lg">
+              {vertical.title}
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed font-light drop-shadow">
+              {vertical.desc}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content Section */}
+      <div className="relative z-0 -mt-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-[1fr_350px] gap-12 lg:gap-20 items-start pt-24">
+          
+          {/* Left Column: Long Desc */}
+          <div className="max-w-none">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl font-display font-semibold mb-8 text-[color:var(--c-text)]">Overview</h2>
+              <div className="text-lg md:text-xl leading-relaxed opacity-90 font-light space-y-6">
+                <p className="first-letter:text-6xl md:first-letter:text-7xl first-letter:font-bold first-letter:text-[color:var(--c-accent)] first-letter:mr-4 first-letter:float-left first-line:uppercase first-line:tracking-widest">
+                  {vertical.longDesc}
+                </p>
+                <p>
+                  As an industry leader, our approach to {vertical.title.toLowerCase()} combines advanced technological insights with deep market penetration. We work closely with our global partners to ensure that our operations set the standard for quality, reach, and customer satisfaction across Pakistan.
+                </p>
+              </div>
+            </Reveal>
+
+            {/* Simulated Feature Grid */}
+            <Reveal delay={150}>
+              <div className="mt-16 grid sm:grid-cols-2 gap-6">
+                {[
+                  { icon: <CheckCircle2 className="h-6 w-6 text-[color:var(--c-accent)]"/>, title: "Quality Assured", text: "Global standards integrated locally." },
+                  { icon: <Users className="h-6 w-6 text-[color:var(--c-accent)]"/>, title: "Expert Team", text: "Dedicated specialists driving success." },
+                  { icon: <MapPin className="h-6 w-6 text-[color:var(--c-accent)]"/>, title: "National Reach", text: "Deep penetration across all provinces." },
+                  { icon: <Calendar className="h-6 w-6 text-[color:var(--c-accent)]"/>, title: "Proven Track Record", text: "Decades of consistent delivery." }
+                ].map((ft, i) => (
+                  <div key={i} className="p-6 rounded-2xl border border-[color:var(--c-border)] bg-[color:var(--c-surface)] hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md">
+                    <div className="h-12 w-12 rounded-xl bg-[color:var(--c-accent)]/10 grid place-items-center mb-4">
+                      {ft.icon}
+                    </div>
+                    <h4 className="font-semibold text-lg">{ft.title}</h4>
+                    <p className="mt-2 text-sm opacity-75">{ft.text}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+          
+          {/* Right Column: Sticky Sidebar / CTA */}
+          <div className="lg:sticky lg:top-32 space-y-6">
+             <Reveal delay={200}>
+               <div className="p-8 rounded-3xl border border-[color:var(--c-border)] bg-[color:var(--c-surface)] relative overflow-hidden group shadow-xl">
+                 <div className="absolute -right-10 -top-10 h-32 w-32 bg-[color:var(--c-accent)] rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700" />
+                 
+                 <h3 className="font-display font-semibold text-2xl">Interested in {vertical.title}?</h3>
+                 <p className="mt-4 text-sm opacity-75 leading-relaxed">
+                   Partner with Advance Telecom to leverage our nationwide network and industry expertise.
+                 </p>
+                 
+                 <Link to={`${base}/contact`} className="mt-8 w-full inline-flex justify-center items-center gap-2 rounded-full bg-[color:var(--c-accent)] px-6 py-3.5 text-sm font-semibold text-white shadow-lg hover:opacity-90 hover:shadow-xl transition-all hover:-translate-y-0.5">
+                   Get in Touch <ArrowRight className="h-4 w-4" />
+                 </Link>
+                 
+                 <div className="mt-6 pt-6 border-t border-[color:var(--c-border)] space-y-3">
+                   <div className="text-xs uppercase tracking-widest opacity-60">Direct Contact</div>
+                   <div className="flex items-center gap-3 text-sm font-medium"><Mail className="h-4 w-4 text-[color:var(--c-accent)]" /> partners@advancetelecom.com.pk</div>
+                 </div>
+               </div>
+             </Reveal>
+          </div>
+
+        </div>
       </div>
     </div>
   );
