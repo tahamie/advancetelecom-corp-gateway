@@ -60,7 +60,7 @@ export const VERTICALS = [
     title: "Smart Devices", 
     desc: "Wearables, true-wireless audio and connected home devices.",
     longDesc: "Step into the future with our ecosystem of smart devices. We distribute the latest in wearable technology, true-wireless audio, and smart home connectivity, empowering consumers to live more integrated, efficient, and connected lives.",
-    videoUrl: "https://videos.pexels.com/video-files/5200382/5200382-hd_1920_1080_30fps.mp4"
+    videoUrl: "https://videos.pexels.com/video-files/3191887/3191887-uhd_2560_1440_25fps.mp4"
   },
   { 
     slug: "energy-solutions",
@@ -81,7 +81,7 @@ export const VERTICALS = [
     title: "After-Sales & Service", 
     desc: "Nationwide warranty, repair and customer-support infrastructure.",
     longDesc: "Our commitment to the customer extends far beyond the sale. With a robust nationwide infrastructure, we offer comprehensive warranty coverage, expert repair services, and dedicated customer support to ensure peace of mind with every purchase.",
-    videoUrl: "https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4"
+    videoUrl: "https://cdn.coverr.co/videos/coverr-man-types-on-iphone-15/1080p.mp4"
   },
 ];
 
