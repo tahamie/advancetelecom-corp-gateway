@@ -53,28 +53,28 @@ export const VERTICALS = [
     title: "Accessories", 
     desc: "A curated portfolio of cases, audio, chargers and power banks from trusted brands.",
     longDesc: "Enhance and protect your devices with our carefully curated selection of premium accessories. From high-fidelity audio equipment and durable cases to fast chargers and reliable power banks, we partner with trusted global brands to deliver quality you can count on.",
-    videoUrl: "https://videos.pexels.com/video-files/5200382/5200382-hd_1920_1080_30fps.mp4"
+    videoUrl: "https://cdn.coverr.co/videos/coverr-using-whatsapp-on-a-laptop-2229/1080p.mp4"
   },
   { 
     slug: "smart-devices",
     title: "Smart Devices", 
     desc: "Wearables, true-wireless audio and connected home devices.",
     longDesc: "Step into the future with our ecosystem of smart devices. We distribute the latest in wearable technology, true-wireless audio, and smart home connectivity, empowering consumers to live more integrated, efficient, and connected lives.",
-    videoUrl: "https://videos.pexels.com/video-files/3191887/3191887-uhd_2560_1440_25fps.mp4"
+    videoUrl: "https://cdn.coverr.co/videos/coverr-a-man-makes-a-phone-call-at-his-home-office-6896/1080p.mp4"
   },
   { 
     slug: "energy-solutions",
     title: "Energy Solutions", 
     desc: "Solar, inverter and battery systems for homes, businesses and industry.",
     longDesc: "Powering Pakistan's transition to clean, sustainable energy. We provide comprehensive solar panels, high-efficiency inverters, and robust battery storage systems designed to meet the demands of residential, commercial, and industrial sectors.",
-    videoUrl: "https://videos.pexels.com/video-files/2822247/2822247-hd_1920_1080_24fps.mp4"
+    videoUrl: "https://cdn.coverr.co/videos/coverr-neighborhood-in-milan-1656/1080p.mp4"
   },
   { 
     slug: "retail-enablement",
     title: "Retail Enablement", 
     desc: "Training academy, POS support and channel programmes for retail partners.",
     longDesc: "We don't just supply products; we build businesses. Our comprehensive retail enablement programs include a dedicated training academy, point-of-sale (POS) support, and lucrative channel initiatives designed to maximize our partners' success.",
-    videoUrl: "https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4"
+    videoUrl: "https://cdn.coverr.co/videos/coverr-a-man-enters-a-mini-market-7284/1080p.mp4"
   },
   { 
     slug: "after-sales",
